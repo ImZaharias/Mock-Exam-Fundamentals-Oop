@@ -1,3 +1,4 @@
+![Exam Page](https://github.com/yourusername/repo/assets/screenshot-url.png)
 # Salesforce Platform Developer I Mock Exam
 
 > Fast, AI-powered practice exam for **Platform Developer I certification** with 60 real-world questions.  
@@ -22,7 +23,7 @@ Complete mock exam simulation:
 ## 🚀 Quick Start
 
 ### 🌐 Live Demo
-**[Add your GitHub Pages URL here]**
+**[(https://imzaharias.github.io/Salesforce-Platform-Developer-I-Mock-Exam/)]**
 
 ### 💻 Local Setup
 ```bash
