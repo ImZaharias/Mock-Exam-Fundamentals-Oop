@@ -1,4 +1,4 @@
-![Exam Page](https://github.com/yourusername/repo/assets/screenshot-url.png)
+![Exam Page]([https://github.com/yourusername/repo/assets/screenshot-url.png](https://github.com/ImZaharias/Salesforce-Platform-Developer-I-Mock-Exam/blob/main/dev-i.png))
 # Salesforce Platform Developer I Mock Exam
 
 > Fast, AI-powered practice exam for **Platform Developer I certification** with 60 real-world questions.  
