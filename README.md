@@ -1,4 +1,4 @@
-![Exam Page]([(https://github.com/ImZaharias/Salesforce-Platform-Developer-I-Mock-Exam/blob/main/dev-i.png))
+![Exam Page](https://github.com/ImZaharias/Salesforce-Platform-Developer-I-Mock-Exam/blob/main/dev-i.png)
 # Salesforce Platform Developer I Mock Exam
 
 > Fast, AI-powered practice exam for **Platform Developer I certification** with 60 real-world questions.  
