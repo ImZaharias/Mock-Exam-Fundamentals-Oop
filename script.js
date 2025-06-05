@@ -898,7 +898,8 @@ function submitExam() {
                         ${userAnswer === undefined ? ' (Not answered)' : ''}
                     </span>
                 </div>
-                <div class="question-preview">${question.question.substring(0, 100)}...</div>
+                <div class="question-preview">${question.question}</div>
+                <div class="question-preview">${question.explanation}</div>
                 ${!isCorrect ? `<div class="correct-answer">Correct answer: ${String.fromCharCode(65 + question.correct)}</div>` : ''}
             </div>
         `;
