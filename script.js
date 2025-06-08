@@ -27,12 +27,6 @@ const categories = {
     }
 };
 
-questions.forEach(q => {
-    if (!Array.isArray(q.correct)) {
-        q.correct = [q.correct];
-    }
-});
-
 function loadMock(mockFile) {
     document.getElementById('levelMenu').style.display = 'none';
     document.getElementById('examBody').style.display = 'block';
@@ -52,10 +46,16 @@ function loadMock(mockFile) {
 
 
 function initializeExam() {
+    questions.forEach(q => {
+        if (!Array.isArray(q.correct)) {
+            q.correct = [q.correct];
+        }
+    });
+
     document.getElementById('homeButton').style.display = 'inline-block';
     startTimer();
     showQuestion(0);
-    updateProgress(); 
+    updateProgress();    
 }
 
 function goHome() {
