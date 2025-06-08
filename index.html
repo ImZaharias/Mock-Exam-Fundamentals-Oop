@@ -7,6 +7,18 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <div id="levelMenu" style="text-align: center; padding: 40px;">
+        <h2 style="margin-bottom: 20px; color: white;">Select Test Difficulty</h2>
+        <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+            <button class="level-btn" onclick="loadMock('mocktest7.js')">Level 1<br>(6/10 - Warming Up)</button>
+            <button class="level-btn" onclick="loadMock('mocktest7b.js')">Level 2<br>(7/10 - Getting There)</button>
+            <button class="level-btn" onclick="loadMock('mocktest8.js')">Level 3<br>(8/10 - Solid)</button>
+            <button class="level-btn" onclick="loadMock('mocktest9.js')">Level 4<br>(9/10 - Tough)</button>
+            <button class="level-btn" onclick="loadMock('mocktest10.js')">Level 5<br>(10/10 - Boss Mode)</button>
+    </div>
+
+
     <div class="exam-container">
         <div class="exam-header">
             <h1>Platform Developer I Certification</h1>
@@ -17,6 +29,12 @@
                 </div>
                 <div>68% to Pass</div>
             </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 10px;">
+            <button id="homeButton" class="nav-btn" onclick="goHome()" style="display: none;">
+                ⬅ Back to Level Selection
+            </button>
         </div>
         
         <div class="exam-body" id="examBody">
@@ -30,7 +48,6 @@
         </div>
     </div>
 
-    <script src="mocktestclaude2.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,116 +1,124 @@
 ![Exam Page](https://github.com/ImZaharias/Salesforce-Platform-Developer-I-Mock-Exam/blob/main/dev-i.png)
+
 # Salesforce Platform Developer I Mock Exam
 
-> Fast, AI-powered practice exam for **Platform Developer I certification** with 60 real-world questions.  
-> **✅ Used successfully to pass the actual Platform Developer I certification exam!**
+> ⚡️ AI-powered practice exam for **Salesforce Platform Developer I certification**, designed to simulate the real exam experience.  
+> ✅ Built by Zacharias and powered by OpenAI's guidance.
 
 ---
 
 ## 🎯 What It Does
 
-Complete mock exam simulation:
+A complete exam simulation built for **realistic preparation**:
 
-| Feature | Details |
-|---------|---------|
-| **Questions** |     60 questions across all Platform Developer I domains |
-| **Timer** |         105-minute countdown (real exam conditions) |
-| **Passing Score** | 68% to pass (41/60 questions) |
-| **Analytics** |     Category breakdown showing strengths/weaknesses |
-| **Results** |       Instant scoring with detailed review |
+| Feature               | Details                                                  |
+|-----------------------|----------------------------------------------------------|
+| **Questions**          | 60 real-world questions covering all key domains         |
+| **Timer**              | 105-minute countdown (just like the real exam)           |
+| **Passing Score**      | 68% (41/60 correct to pass)                              |
+| **Category Analytics** | Breakdown of strengths and weaknesses per category       |
+| **Instant Review**     | Full result page with correct answers & explanations     |
 
 ---
 
-## 🚀 Quick Start
+## 🌐 Live Demo
 
-### 🌐 Live Demo
-**[(https://imzaharias.github.io/Salesforce-Platform-Developer-I-Mock-Exam/)]**
+👉 **[Open the Demo](https://imzaharias.github.io/Salesforce-Platform-Developer-I-Mock-Exam/)**
 
-### 💻 Local Setup
+---
+
+## 💻 Local Setup
+
 ```bash
 git clone https://github.com/ImZaharias/salesforce-platform-dev-exam.git
 cd salesforce-platform-dev-exam
-# Open index.html in browser
+# Open index.html in your browser
 ```
 
 ---
 
-## 📊 Question Categories
+## 📊 Exam Categories & Distribution
 
-| Category | Questions | Percentage |
-|----------|-----------|------------|
-| **Developer Fundamentals** | 14 questions | 23% |
-| **Process Automation & Logic** | 18 questions | 30% |
-| **User Interface** | 15 questions | 25% |
-| **Testing & Deployment** | 13 questions | 22% |
+| Category                     | Questions | Percentage |
+|-----------------------------|-----------|------------|
+| **Developer Fundamentals**  | 19        | 31.7%      |
+| **Process Automation & Logic** | 17     | 28.3%      |
+| **User Interface**          | 14        | 23.3%      |
+| **Testing & Deployment**    | 10        | 16.7%      |
+| **Total**                   | 60        | 100%       |
 
 ---
 
-## 🔧 Customization
+## 🧪 Difficulty Levels
 
-> Want to modify questions or create different tests?
+Choose between 5 full-length mock tests from beginner to expert:
 
-- **Edit Questions**: Modify `script.js` to add/change questions
-- **Categories**: Adjust question distribution and categories  
-- **Timer Settings**: Change exam duration or passing scores
-- **New Tests**: Create additional exam variations
+| Level | Difficulty   | Recommended For             |
+|-------|--------------|-----------------------------|
+| 6     | Basic         | Newcomers to Salesforce     |
+| 7     | Beginner      | Some basic experience       |
+| 8     | Intermediate  | Realistic prep              |
+| 9     | Advanced      | Solid exam readiness        |
+| 10    | Expert        | Final challenge before test |
 
-```javascript
-// Example: Adding a new question
+---
+
+## 🔧 Customize It
+
+Easily build your own variation or extend questions.
+
+- **Edit Questions**: Modify `mocktestX.js`
+- **Adjust Categories**: Match your focus areas
+- **Change Timer/Score**: Customize duration or threshold
+
+```js
+// Example: Add new question
 {
-    question: "Your new Salesforce question here?",
-    options: ["Option A", "Option B", "Option C", "Option D"],
-    correct: 0, // Index of correct answer
-    explanation: "Why this answer is correct"
+  question: "What does the @isTest annotation do in Apex?",
+  options: ["Marks a method as a test", "Creates a trigger", "Installs data", "Deploys a class"],
+  correct: 0,
+  explanation: "The @isTest annotation marks methods or classes for testing purposes."
 }
 ```
 
 ---
 
-## 💻 Tech Stack
+## 🧱 Tech Stack
 
-- **Frontend**: Pure HTML5, CSS3, JavaScript
-- **Deployment**: No server required
-- **Design**: Fully responsive
-- **Development**: **100% built by Claude AI**
-
----
-
-## 🎓 Perfect For
-
-- ✅ **Platform Developer I certification prep**
-- ✅ **Proven effective** - helped pass the real exam!  
-- ✅ Quick skill assessment
-- ✅ Identifying knowledge gaps
-- ✅ Realistic exam practice
+- **HTML5 / CSS3 / JavaScript**
+- 100% Client-side (No backend required)
+- Fully responsive and mobile-friendly
 
 ---
 
-## 📋 Requirements
+## 🎓 Ideal For
 
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- 105 minutes for full exam experience
-- No installation required
+- ✅ Candidates preparing for Platform Developer I certification
+- ✅ Daily practice with progress tracking
+- ✅ Identifying weak areas
+- ✅ Practicing under timed exam conditions
 
 ---
 
-## 🤖 AI-Powered Development
+## ✅ Requirements
 
-> **This entire application was created 100% by Claude AI** - from the exam logic and question bank to the responsive design and scoring system.
-
-**Demonstrates how AI can rapidly build professional-grade educational tools for certification preparation.**
+- Any modern browser (Chrome, Firefox, Edge, Safari)
+- 105 minutes for full test experience
+- No installation or login needed
 
 ---
 
 ## 🏆 Success Story
 
-**This mock exam was instrumental in passing the actual Platform Developer I certification!**  
-Use it to identify your weak areas and build confidence before taking the real exam.
+> **This mock exam was instrumental in passing the actual Salesforce Platform Developer I certification!**  
+> Use it to practice smart, build confidence, and pass on your first try.
 
 ---
 
-**Ready to test your Platform Developer skills?** 🎯  
-**Start the exam and see if you can hit that 68% passing score!**
+**Ready to test your Salesforce skills?** 🎯  
+Take the challenge and see if you can pass with 68% or more!
+👉 **[Start Now!!!](https://imzaharias.github.io/Salesforce-Platform-Developer-I-Mock-Exam/)**
 
 ---
 
-*Complete AI-generated solution for fast, effective Salesforce certification prep* 🚀
+*Crafted by AI, customized by developers — for smarter, faster Salesforce certification prep.* 🚀

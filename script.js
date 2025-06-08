@@ -33,10 +33,43 @@ questions.forEach(q => {
     }
 });
 
+function loadMock(mockFile) {
+    document.getElementById('levelMenu').style.display = 'none';
+    document.getElementById('examBody').style.display = 'block';
+
+    // Unique Url
+    const uniqueSrc = mockFile + '?v=' + new Date().getTime();
+
+    const script = document.createElement('script');
+    script.src = uniqueSrc;
+
+    script.onload = () => {
+        initializeExam();
+    };
+
+    document.body.appendChild(script);
+}
+
+
 function initializeExam() {
+    document.getElementById('homeButton').style.display = 'inline-block';
     startTimer();
     showQuestion(0);
-    updateProgress();
+    updateProgress(); 
+}
+
+function goHome() {
+    // clear the timer and reset the exam state
+    clearInterval(timerInterval);
+    document.getElementById('examBody').style.display = 'none';
+    document.getElementById('results').style.display = 'none';
+    document.getElementById('levelMenu').style.display = 'block';
+    document.getElementById('homeButton').style.display = 'none';
+
+    // Reset state
+    currentQuestion = 0;
+    answers = {};
+    timeLeft = 105 * 60;
 }
 
 function startTimer() {
@@ -312,4 +345,8 @@ function submitExam() {
 }
 
 // Initialize the exam when the page loads
-window.onload = initializeExam;
+window.onload = () => {
+    document.getElementById('examBody').style.display = 'none';
+    document.getElementById('results').style.display = 'none';
+    document.getElementById('levelMenu').style.display = 'block';
+};
