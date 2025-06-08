@@ -5,6 +5,11 @@
 > ⚡️ AI-powered practice exam for **Salesforce Platform Developer I certification**, designed to simulate the real exam experience.  
 > ✅ Built by Zacharias using a combination of AI tools – Claude was primarily used for content structuring and splitting the test into logical components, while ChatGPT assisted with logic implementation and core functionality. DeepSeek, along with the others, contributed to generating and validating question sets.
 
+If you use or adapt this project, please consider mentioning the original creator.  
+**GitHub:** https://github.com/ImZaharias
+
+Attribution is not legally required, but it's appreciated.
+
 ---
 
 ## 🎯 What It Does
