@@ -1,350 +1,668 @@
 var questions = [
-    // Developer Fundamentals - Expert 19 questions
+    // Developer Fundamentals - Advanced (19 questions)
     {
-        "question": "In a multi-tenant architecture, what is the primary challenge when implementing custom indexing strategies?",
+        "question": "When implementing a sharing recalculation engine for hierarchical data, which algorithm provides optimal performance with minimal SOQL queries?",
         "options": [
-            "Index fragmentation across tenants",
-            "Selective query optimization with tenant isolation",
-            "Custom index maintenance overhead",
-            "Cross-tenant data leakage prevention"
+            "Breadth-first search with memoization",
+            "Floyd-Warshall algorithm with path compression",
+            "Dijkstra's algorithm with priority queue",
+            "Tarjan's strongly connected components"
         ],
         "correct": 1,
-        "explanation": "Selective query optimization while maintaining tenant isolation is the primary challenge in multi-tenant indexing."
+        "explanation": "Floyd-Warshall with path compression efficiently calculates transitive sharing relationships in O(n³) time complexity with a single SOQL query."
     },
     {
-        "question": "Which approach provides optimal performance for complex hierarchical data processing with deep nesting?",
+        "question": "What is the most secure implementation for field-level encryption when integrating with external payment systems?",
         "options": [
-            "Recursive Common Table Expressions (CTE)",
-            "Materialized path pattern with custom indexing",
-            "Adjacency list with level-based processing",
-            "Nested set model with interval arithmetic"
-        ],
-        "correct": 1,
-        "explanation": "Materialized path pattern with custom indexing provides optimal performance for deep hierarchical structures."
-    },
-    {
-        "question": "What is the most critical consideration when implementing custom metadata-driven architecture?",
-        "options": [
-            "Metadata versioning and migration strategies",
-            "Runtime performance impact of dynamic logic",
-            "Security implications of configurable behavior",
-            "All considerations require careful architectural planning"
+            "Platform encryption with tenant-specific keys",
+            "AES-256 with HSM-managed keys",
+            "Custom Crypto class implementation",
+            "Tokenization with PCI-compliant vault"
         ],
         "correct": 3,
-        "explanation": "Metadata-driven architecture requires comprehensive planning for versioning, performance, and security."
+        "explanation": "Tokenization completely removes sensitive payment data from your system while maintaining referential integrity through tokens."
     },
     {
-        "question": "Which design pattern best addresses the challenge of maintaining transaction integrity across multiple external systems?",
+        "question": "Which pattern ensures atomicity for complex multi-object transactions spanning multiple async operations?",
         "options": [
-            "Two-phase commit protocol",
             "Saga pattern with compensating transactions",
-            "Event sourcing with eventual consistency",
-            "Distributed transaction coordinator"
+            "Two-phase commit protocol",
+            "Transactional outbox pattern",
+            "Event sourcing with CQRS"
+        ],
+        "correct": 0,
+        "explanation": "The Saga pattern maintains data consistency across distributed transactions by implementing compensating actions for rollback scenarios."
+    },
+    {
+        "question": "What is the optimal approach for implementing real-time, multi-org data aggregation with conflict resolution?",
+        "options": [
+            "Change Data Capture with centralized processor",
+            "CRDTs (Conflict-Free Replicated Data Types)",
+            "Operational transformation with version vectors",
+            "Centralized materialized view with ETL"
         ],
         "correct": 1,
-        "explanation": "Saga pattern with compensating transactions is most practical for distributed transaction management."
+        "explanation": "CRDTs provide mathematically proven conflict resolution for distributed data without coordination overhead."
     },
     {
-        "question": "What is the optimal strategy for handling platform event ordering guarantees in high-volume scenarios?",
+        "question": "Which caching strategy minimizes platform cache usage while maintaining sub-second response times for complex calculations?",
         "options": [
-            "Single partition with sequential processing",
-            "Multiple partitions with correlation IDs",
-            "Event sourcing with sequence numbers",
-            "Hybrid approach with partition strategy and sequence validation"
+            "Layered caching with partial result invalidation",
+            "Memoization with LRU eviction",
+            "Write-through cache with batch invalidation",
+            "On-demand computation with lazy loading"
+        ],
+        "correct": 1,
+        "explanation": "Memoization caches only specific computation results, optimizing both performance and cache consumption."
+    },
+    {
+        "question": "What is the most efficient way to implement a graph traversal algorithm in Apex with minimal heap usage?",
+        "options": [
+            "Iterative DFS with custom stack implementation",
+            "Recursive DFS with tail-call optimization",
+            "BFS with queue and visited set optimization",
+            "Adjacency list with lazy loading"
+        ],
+        "correct": 0,
+        "explanation": "Iterative DFS avoids recursion depth limits and allows precise control over heap usage through manual stack management."
+    },
+    {
+        "question": "Which architecture pattern best addresses governor limits when processing complex financial transactions?",
+        "options": [
+            "Event-driven architecture with Platform Events",
+            "Saga pattern with compensating transactions",
+            "CQRS with separate read/write models",
+            "Transaction outbox pattern"
+        ],
+        "correct": 1,
+        "explanation": "The Saga pattern breaks complex transactions into manageable steps while maintaining data consistency through compensation."
+    },
+    {
+        "question": "What is the optimal strategy for implementing a real-time, multi-object transaction rollback mechanism?",
+        "options": [
+            "Composite API with allOrNone flag",
+            "Database.Savepoint with nested transaction control",
+            "Custom transaction log with compensating actions",
+            "Platform Events with transaction state tracking"
+        ],
+        "correct": 2,
+        "explanation": "A custom transaction log provides the most robust rollback capability across complex multi-object transactions."
+    },
+    {
+        "question": "Which approach provides the most scalable solution for implementing complex business rules across multiple orgs?",
+        "options": [
+            "Custom metadata types with packaged rule definitions",
+            "External rules engine with API integration",
+            "Platform cache with rule versioning",
+            "Hierarchical custom settings with override capability"
+        ],
+        "correct": 1,
+        "explanation": "An external rules engine centralizes complex logic while allowing org-specific variations through API configurations."
+    },
+    {
+        "question": "What is the most secure pattern for implementing row-level security in a multi-org hub-and-spoke model?",
+        "options": [
+            "Centralized security service with org-specific policies",
+            "Shared permission sets with dynamic group assignment",
+            "Data virtualization layer with security predicates",
+            "Hierarchical sharing with inherited access rules"
+        ],
+        "correct": 2,
+        "explanation": "A virtualization layer with security predicates provides consistent access control across distributed data sources."
+    },
+    {
+        "question": "Which compliance strategy best addresses GDPR right-to-be-forgotten requirements in complex data landscapes?",
+        "options": [
+            "Automated data erasure procedures with dependency mapping",
+            "Pseudonymization with reversible encryption",
+            "Data retention policies with automated expiration",
+            "Isolated storage with cryptographic shredding"
+        ],
+        "correct": 0,
+        "explanation": "Automated erasure with dependency mapping ensures complete compliance by handling related records across objects."
+    },
+    {
+        "question": "What is the most secure approach for implementing MFA in legacy authentication scenarios?",
+        "options": [
+            "Custom authentication provider with step-up verification",
+            "Proxy service with header-based MFA injection",
+            "Session upgrade with reauthentication challenge",
+            "Perimeter security with conditional access policies"
+        ],
+        "correct": 1,
+        "explanation": "A proxy service can enforce MFA without modifying legacy systems by injecting verification headers."
+    },
+    {
+        "question": "Which pattern provides the most reliable event-driven integration with external ERP systems?",
+        "options": [
+            "Change Data Capture with middleware transformation",
+            "Idempotent receiver with transactional outbox",
+            "Enterprise service bus with canonical data model",
+            "Event-carried state transfer with durable subscriptions"
+        ],
+        "correct": 1,
+        "explanation": "Idempotent receiver pattern ensures exactly-once processing despite network or system failures."
+    },
+    {
+        "question": "What is the optimal architecture for real-time bi-directional sync with external databases?",
+        "options": [
+            "Change Data Capture with conflict resolution",
+            "Dual-write pattern with compensating transactions",
+            "Event sourcing with materialized views",
+            "Transaction log tailing with change application"
+        ],
+        "correct": 0,
+        "explanation": "CDC provides low-impact, high-performance replication with built-in conflict handling."
+    },
+    {
+        "question": "Which approach minimizes latency in global API integrations while maintaining data consistency?",
+        "options": [
+            "Edge caching with TTL-based invalidation",
+            "Read replicas with eventual consistency",
+            "Global load balancing with sticky sessions",
+            "CRDTs with conflict-free replicated data types"
         ],
         "correct": 3,
-        "explanation": "Hybrid approach combining partition strategy with sequence validation provides optimal ordering guarantees."
+        "explanation": "CRDTs mathematically guarantee consistency while allowing low-latency global operations."
     },
     {
-        "question": "Which approach provides the most robust solution for handling intermittent external service failures?",
+        "question": "What is the most resilient pattern for handling third-party API rate limits?",
         "options": [
             "Exponential backoff with jitter",
-            "Circuit breaker pattern with fallback",
-            "Retry with dead letter queue",
-            "Comprehensive resilience strategy combining all patterns"
+            "Request coalescing with memoization",
+            "Token bucket rate limiting",
+            "Circuit breaker with fallback cache"
         ],
-        "correct": 3,
-        "explanation": "Robust external service integration requires exponential backoff, circuit breakers, and dead letter queues."
+        "correct": 2,
+        "explanation": "Token bucket algorithm precisely controls request rates while maximizing throughput."
     },
     {
-        "question": "What is the primary architectural consideration for implementing event-driven microservices on Salesforce?",
+        "question": "Which architecture best supports zero-downtime migrations for complex integration landscapes?",
         "options": [
-            "Event schema evolution and compatibility",
-            "Service boundary definition and coupling",
-            "Distributed data consistency management",
-            "Comprehensive event-driven architecture strategy"
+            "Blue-green deployment with traffic mirroring",
+            "Canary releases with feature flags",
+            "Strangler pattern with incremental cutover",
+            "Parallel run with differential reconciliation"
         ],
         "correct": 3,
-        "explanation": "Event-driven microservices require careful consideration of schemas, boundaries, and data consistency."
+        "explanation": "Parallel running with reconciliation provides the safest migration path for critical integrations."
     },
     {
-        "question": "Which caching strategy provides optimal performance for frequently changing, user-specific data?",
+        "question": "What is the most efficient way to implement a concurrent processing queue in Apex?",
         "options": [
-            "User session-based caching with TTL",
-            "Invalidation-based caching with change tracking",
-            "Predictive caching with machine learning",
-            "Multi-tier caching with intelligent invalidation"
+            "Queueable chaining with state persistence",
+            "Batch Apex with scope size 1",
+            "Platform Events with ordered delivery",
+            "Custom priority queue with transaction control"
+        ],
+        "correct": 0,
+        "explanation": "Queueable chaining provides the most governor-friendly approach for concurrent processing."
+    },
+    {
+        "question": "Which pattern provides the best separation of concerns for complex trigger architectures?",
+        "options": [
+            "Command pattern with invoker/dispatcher",
+            "Domain-driven design with aggregate roots",
+            "Event-carried state transfer",
+            "Hexagonal architecture with ports/adapters"
+        ],
+        "correct": 1,
+        "explanation": "Domain-driven design aligns trigger logic with business domain boundaries for optimal maintainability."
+    },
+    
+    // Process Automation & Logic - Advanced (17 questions)
+    {
+        "question": "What is the most scalable approach for implementing a complex approval process with dynamic parallel approvers?",
+        "options": [
+            "Multiple approval processes with entry criteria",
+            "Single process with complex approval chains",
+            "Custom Apex approval processor",
+            "Flow with dynamic subprocesses"
+        ],
+        "correct": 2,
+        "explanation": "Custom Apex provides the flexibility needed for dynamic parallel approval routing at scale."
+    },
+    {
+        "question": "Which Flow design pattern best handles complex error recovery with transaction isolation?",
+        "options": [
+            "Fault paths with compensation actions",
+            "Subflows with error boundary components",
+            "Platform Events for error propagation",
+            "Custom error handling Apex actions"
+        ],
+        "correct": 0,
+        "explanation": "Fault paths with compensation actions provide atomic error recovery while maintaining data consistency."
+    },
+    {
+        "question": "What is the most efficient way to process 100K+ records in an automation sequence?",
+        "options": [
+            "Flow with bulkified operations",
+            "Batch Apex with chained Queueables",
+            "Platform Events with async subscribers",
+            "Change Data Capture with triggers"
+        ],
+        "correct": 1,
+        "explanation": "Batch Apex with Queueable chaining provides optimal governor limit usage for large datasets."
+    },
+    {
+        "question": "Which automation tool provides the best performance for complex multi-object transactions?",
+        "options": [
+            "Process Builder with bulkified actions",
+            "Flow with transaction control",
+            "Apex triggers with state management",
+            "Workflow rules with field updates"
+        ],
+        "correct": 2,
+        "explanation": "Apex triggers offer the most control over complex transaction boundaries and state management."
+    },
+    {
+        "question": "What is the impact of complex cross-object formulas on automation performance?",
+        "options": [
+            "Linear performance degradation",
+            "Exponential performance impact",
+            "No impact if properly indexed",
+            "Only affects report generation"
+        ],
+        "correct": 1,
+        "explanation": "Cross-object formulas can cause exponential performance degradation in automation processes."
+    },
+    {
+        "question": "Which approach is best for implementing complex business rules with external system dependencies?",
+        "options": [
+            "Process Builder with callout actions",
+            "Flow with external service components",
+            "Apex with circuit breaker pattern",
+            "Platform Events with async processing"
+        ],
+        "correct": 2,
+        "explanation": "Circuit breaker pattern in Apex provides robust handling of external system failures."
+    },
+    {
+        "question": "What is the recommended pattern for preventing recursive automation in complex workflows?",
+        "options": [
+            "Static recursion counters",
+            "Hierarchical custom settings",
+            "Transaction isolation flags",
+            "Combination of static flags and transaction context"
         ],
         "correct": 3,
-        "explanation": "Multi-tier caching with intelligent invalidation provides optimal performance for dynamic user data."
+        "explanation": "A multi-layered approach provides comprehensive protection against recursion."
     },
     {
-        "question": "What is the most effective approach for implementing complex business rule engines with high performance requirements?",
+        "question": "Which Flow variable scope is most appropriate for sharing data across async boundaries?",
         "options": [
-            "Compiled rule expressions with caching",
-            "Decision trees with optimized traversal",
-            "Rule-based inference engines",
-            "Hybrid architecture combining multiple rule evaluation strategies"
+            "Local variables with serialization",
+            "Platform Events with durable storage",
+            "Custom metadata types",
+            "Static resources"
+        ],
+        "correct": 1,
+        "explanation": "Platform Events persist across async boundaries and provide durable messaging."
+    },
+    {
+        "question": "What is the primary limitation of scheduled flows compared to Batch Apex?",
+        "options": [
+            "Lack of error handling capabilities",
+            "No transaction control",
+            "Cannot process large datasets",
+            "All of the above"
+        ],
+        "correct": 2,
+        "explanation": "Scheduled flows lack the chunking capabilities needed for large dataset processing."
+    },
+    {
+        "question": "Which approach provides the best audit trail for complex automation processes?",
+        "options": [
+            "Debug logs with filtering",
+            "Custom transaction logging objects",
+            "Platform Events with audit subscribers",
+            "Combination of B and C"
         ],
         "correct": 3,
-        "explanation": "High-performance rule engines require hybrid architectures combining multiple evaluation strategies."
+        "explanation": "Comprehensive auditing requires both persistent storage and real-time monitoring."
     },
     {
-        "question": "Which approach provides the best balance between flexibility and performance for dynamic query generation?",
+        "question": "What is the recommended pattern for handling external system integration in automation?",
         "options": [
-            "Query builder pattern with caching",
-            "Template-based queries with parameterization",
-            "Dynamic SOQL with security enforcement",
-            "Adaptive query strategy based on usage patterns"
+            "Direct callouts from Process Builder",
+            "Async processing with retry logic",
+            "Synchronous integration with timeouts",
+            "Platform Events for all integrations"
+        ],
+        "explanation": "Async processing with retry logic provides the most resilient integration pattern.",
+        "correct": 1
+    },
+    {
+        "question": "Which automation tool provides the best debugging capabilities for complex logic?",
+        "options": [
+            "Process Builder debug logs",
+            "Flow debug with variable inspection",
+            "Apex debug statements",
+            "Transaction log analysis"
+        ],
+        "correct": 1,
+        "explanation": "Flow debug provides the most comprehensive visualization of complex automation logic."
+    },
+    {
+        "question": "What is the impact of automation on record locking in high-concurrency scenarios?",
+        "options": [
+            "No impact on locking behavior",
+            "Can cause deadlocks in complex processes",
+            "Improves locking efficiency",
+            "Only affects reports"
+        ],
+        "correct": 1,
+        "explanation": "Complex automation can exacerbate locking issues in high-concurrency environments."
+    },
+    {
+        "question": "Which approach is most effective for testing complex automation scenarios?",
+        "options": [
+            "Unit tests for individual components",
+            "Integration tests covering end-to-end flows",
+            "Both unit and integration testing",
+            "Manual testing with production data"
+        ],
+        "correct": 2,
+        "explanation": "Comprehensive testing requires both component-level and end-to-end validation."
+    },
+    {
+        "question": "What is the recommended approach for migrating complex Process Builder to Flow?",
+        "options": [
+            "Direct conversion using tools",
+            "Complete redesign with Flow best practices",
+            "Gradual migration with parallel testing",
+            "Maintain existing Process Builder"
+        ],
+        "correct": 2,
+        "explanation": "Gradual migration reduces risk while allowing optimization opportunities."
+    },
+    {
+        "question": "In a complex approval process involving multiple levels and dynamic approvers, what is the most scalable and maintainable Flow strategy?",
+        "options": [
+            "Use multiple record-triggered Flows with hardcoded approver IDs",
+            "Implement a single autolaunched Flow with invocable Apex for logic",
+            "Create a dynamic approval matrix using custom metadata and decision elements",
+            "Use multiple Flows for each approval step with static assignments"
+        ],
+        "correct": 2,
+        "explanation": "Custom metadata allows for dynamic, configurable logic without modifying the Flow, improving scalability and maintainability."
+    },
+    {
+        "question": "How can you ensure fault-tolerant error handling in a Flow that performs DML operations on related objects?",
+        "options": [
+            "Wrap each DML in a separate Flow",
+            "Use Apex invocable methods to manage errors centrally",
+            "Use Fault paths on each DML element and assign errors to variables",
+            "Add a single fault path at the end of the Flow to catch all exceptions"
+        ],
+        "correct": 2,
+        "explanation": "Using Fault paths with variables allows handling errors locally and providing meaningful user feedback or automated fallback logic."
+    },
+    // User Interface - Advanced (14 questions)
+    {
+        "question": "Which caching strategy provides the best performance for LWC with real-time data requirements?",
+        "options": [
+            "Browser cache with TTL",
+            "@wire with refreshApex",
+            "Platform cache with invalidation policy",
+            "Client-side storage with observables"
+        ],
+        "correct": 2,
+        "explanation": "Platform cache with proper invalidation balances performance and data freshness."
+    },
+    {
+        "question": "What is the most efficient way to display 10K+ records in a Lightning component?",
+        "options": [
+            "Virtual scrolling with windowing",
+            "Pagination with server-side filtering",
+            "Infinite scroll with lazy loading",
+            "Combination of A and B"
         ],
         "correct": 3,
-        "explanation": "Adaptive query strategies that adjust based on usage patterns provide optimal flexibility and performance."
+        "explanation": "Virtual scrolling and pagination together provide optimal performance for large datasets."
     },
     {
-        "question": "What is the primary challenge when implementing distributed locks in a multi-org environment?",
+        "question": "Which approach provides the best UX for complex multi-step forms?",
         "options": [
-            "Lock timeout and deadlock prevention",
-            "Cross-org communication latency",
-            "Consistency guarantees across network partitions",
-            "Comprehensive distributed synchronization strategy"
+            "Single-page form with sections",
+            "Wizard pattern with progress tracking",
+            "Modal dialog sequence",
+            "Conditional rendering based on inputs"
+        ],
+        "correct": 1,
+        "explanation": "Wizard pattern reduces cognitive load for complex form completion."
+    },
+    {
+        "question": "What is the recommended pattern for state management in enterprise LWCs?",
+        "options": [
+            "Component-level state only",
+            "Lightning Message Service",
+            "Redux pattern with store",
+            "Hybrid approach combining local and shared state"
         ],
         "correct": 3,
-        "explanation": "Distributed locks require addressing timeouts, latency, and consistency in a comprehensive strategy."
+        "explanation": "A balanced approach provides optimal flexibility and performance."
     },
     {
-        "question": "Which approach provides the most efficient solution for processing large-scale data transformations with complex business logic?",
+        "question": "Which security consideration is most critical for LWC input handling?",
         "options": [
-            "Parallel processing with work partitioning",
-            "Pipeline architecture with streaming",
-            "MapReduce pattern with aggregation",
-            "Hybrid processing architecture optimized for specific data patterns"
+            "XSS prevention with output encoding",
+            "CSRF token validation",
+            "Content Security Policy",
+            "All of the above"
         ],
         "correct": 3,
-        "explanation": "Optimal data transformation requires hybrid architectures adapted to specific data and logic patterns."
+        "explanation": "Comprehensive security requires multiple defensive layers."
     },
     {
-        "question": "What is the most critical consideration for implementing custom encryption in Salesforce applications?",
+        "question": "What is the most effective way to optimize LWC rendering performance?",
         "options": [
-            "Key management and rotation strategies",
-            "Performance impact of encryption operations",
-            "Compliance with data protection regulations",
-            "Holistic security architecture including all encryption aspects"
+            "Minimize DOM updates with reactive properties",
+            "Use static getters for template variables",
+            "Implement shouldUpdate lifecycle hook",
+            "All optimization techniques combined"
         ],
         "correct": 3,
-        "explanation": "Custom encryption requires comprehensive security architecture addressing keys, performance, and compliance."
+        "explanation": "Optimal rendering requires multiple complementary techniques."
     },
     {
-        "question": "Which design pattern best addresses the challenge of maintaining data consistency in eventually consistent systems?",
+        "question": "Which approach provides the best accessibility in complex LWCs?",
         "options": [
-            "CQRS with event sourcing",
-            "Saga pattern with compensation",
-            "Two-phase commit with rollback",
-            "Multi-pattern approach based on consistency requirements"
+            "Semantic HTML with ARIA",
+            "Keyboard navigation support",
+            "Screen reader testing",
+            "Comprehensive accessibility audit"
         ],
         "correct": 3,
-        "explanation": "Data consistency in distributed systems requires selecting appropriate patterns based on specific requirements."
+        "explanation": "True accessibility requires validation through rigorous testing."
     },
     {
-        "question": "What is the optimal approach for implementing real-time analytics on high-volume transactional data?",
+        "question": "What is the recommended pattern for error handling in distributed LWCs?",
         "options": [
-            "Stream processing with micro-batching",
-            "Lambda architecture with batch and stream layers",
-            "Kappa architecture with unified streaming",
-            "Adaptive architecture based on data velocity and latency requirements"
+            "Component-level error boundaries",
+            "Centralized error service",
+            "Toast messages for all errors",
+            "Layered error handling strategy"
         ],
         "correct": 3,
-        "explanation": "Real-time analytics requires adaptive architectures that respond to specific velocity and latency needs."
+        "explanation": "Different error types require different handling approaches."
     },
     {
-        "question": "Which approach provides the most robust solution for handling schema evolution in event-driven architectures?",
+        "question": "Which testing approach is most effective for LWCs?",
         "options": [
-            "Schema registry with compatibility rules",
-            "Versioned event contracts with migration",
-            "Flexible schema with backward compatibility",
-            "Comprehensive schema governance strategy"
+            "Unit tests with Jest",
+            "Integration tests with wire mocks",
+            "End-to-end UI testing",
+            "Comprehensive test pyramid"
         ],
         "correct": 3,
-        "explanation": "Schema evolution requires comprehensive governance including registries, versioning, and compatibility strategies."
+        "explanation": "Quality assurance requires testing at all levels."
     },
     {
-        "question": "What is the primary architectural consideration for implementing multi-region disaster recovery?",
+        "question": "What is the impact of Lightning Locker on third-party library integration?",
         "options": [
-            "Data replication strategies and consistency",
-            "Failover mechanisms and recovery time objectives",
-            "Network partitioning and split-brain scenarios",
-            "Comprehensive disaster recovery architecture"
+            "No impact on compatible libraries",
+            "Requires CSP-compliant libraries",
+            "Blocks DOM-accessing libraries",
+            "All of the above"
         ],
         "correct": 3,
-        "explanation": "Multi-region disaster recovery requires comprehensive architecture addressing replication, failover, and partitioning."
+        "explanation": "Locker Service imposes multiple security constraints."
     },
     {
-        "question": "Which approach provides optimal performance for complex graph traversal operations on large datasets?",
+        "question": "Which pattern best handles complex component composition?",
         "options": [
-            "Adjacency list with recursive queries",
-            "Graph database with specialized algorithms",
-            "Materialized graph views with caching",
-            "Hybrid graph processing optimized for specific traversal patterns"
+            "Container-presenter pattern",
+            "Renderless component pattern",
+            "Higher-order components",
+            "Context API with providers"
+        ],
+        "correct": 1,
+        "explanation": "Renderless components maximize logic reuse."
+    },
+    {
+        "question": "What is the most efficient way to handle real-time updates in LWCs?",
+        "options": [
+            "Polling with setTimeout",
+            "Platform Events with CometD",
+            "Change Data Capture",
+            "UI API with refreshView"
+        ],
+        "correct": 1,
+        "explanation": "Platform Events provide true real-time push notifications."
+    },
+    {
+        "question": "Which approach provides the best mobile responsiveness?",
+        "options": [
+            "SLDS responsive utilities",
+            "CSS media queries",
+            "Conditional rendering",
+            "Comprehensive responsive design"
         ],
         "correct": 3,
-        "explanation": "Optimal graph traversal requires hybrid approaches optimized for specific graph structures and access patterns."
+        "explanation": "Mobile optimization requires multiple techniques."
     },
     {
-        "question": "What is the most effective strategy for implementing zero-downtime deployments in complex enterprise environments?",
+        "question": "What is the recommended approach for complex LWC business logic?",
         "options": [
-            "Blue-green deployment with database migration",
-            "Rolling deployment with feature toggles",
-            "Canary deployment with automated rollback",
-            "Comprehensive deployment strategy combining multiple approaches"
+            "Client-side JavaScript",
+            "Apex controllers",
+            "Lightning Flows",
+            "Right-tool-for-the-job approach"
         ],
         "correct": 3,
-        "explanation": "Zero-downtime deployments in complex environments require combining multiple deployment strategies."
+        "explanation": "Logic should be distributed appropriately."
     },
-
-    // Process Automation & Logic - Expert 17 questions
+    
+    // Testing & Deployment - Advanced (10 questions)
     {
-        "question": "What is the optimal approach for implementing complex state machines with multiple parallel workflows?",
+        "question": "Which testing strategy provides the most coverage for enterprise applications?",
         "options": [
-            "Nested state management with synchronization points",
-            "Actor model with message passing",
-            "Workflow orchestration with compensation logic",
-            "Comprehensive state management architecture"
+            "Unit tests with high coverage",
+            "Integration tests with real data",
+            "User acceptance testing",
+            "Comprehensive test pyramid"
         ],
         "correct": 3,
-        "explanation": "Complex state machines require comprehensive architecture addressing nested states, parallelism, and synchronization."
+        "explanation": "Enterprise quality requires testing at all levels."
     },
     {
-        "question": "Which pattern provides the most robust solution for handling long-running business processes with human intervention?",
+        "question": "What is the most effective test data strategy?",
         "options": [
-            "Saga pattern with human task management",
-            "Workflow orchestration with pause/resume",
-            "Event-driven process management",
-            "Hybrid process architecture with multiple interaction patterns"
+            "Test data factories",
+            "@TestSetup methods",
+            "Mock responses",
+            "Combined approach"
         ],
         "correct": 3,
-        "explanation": "Long-running processes with human intervention require hybrid architectures combining multiple patterns."
+        "explanation": "Different test types require different data strategies."
     },
     {
-        "question": "What is the primary challenge when implementing real-time business rule evaluation at scale?",
+        "question": "Which deployment strategy minimizes risk?",
         "options": [
-            "Rule compilation and optimization",
-            "Concurrent rule execution with consistency",
-            "Rule versioning and hot deployment",
-            "Comprehensive rule engine architecture"
+            "Blue-green deployment",
+            "Canary releases",
+            "Feature flags",
+            "Combined risk mitigation"
         ],
         "correct": 3,
-        "explanation": "Scalable rule evaluation requires addressing compilation, concurrency, versioning, and deployment challenges."
+        "explanation": "Risk reduction requires multiple safeguards."
     },
     {
-        "question": "Which approach provides optimal performance for complex approval workflows with dynamic routing?",
+        "question": "What is the best approach for testing async processes?",
         "options": [
-            "Rule-based routing with caching",
-            "Graph-based workflow with optimization",
-            "Machine learning-driven routing decisions",
-            "Adaptive routing architecture with multiple strategies"
+            "Test.startTest/stopTest",
+            "Mock Queueable chains",
+            "Integration tests",
+            "Comprehensive async testing"
         ],
         "correct": 3,
-        "explanation": "Complex approval workflows require adaptive architectures combining rule-based, graph-based, and ML approaches."
+        "explanation": "Async testing requires multiple techniques."
     },
     {
-        "question": "What is the most effective strategy for implementing distributed workflow coordination?",
+        "question": "Which CI/CD practice provides most value?",
         "options": [
-            "Centralized orchestration with distributed execution",
-            "Peer-to-peer coordination with consensus algorithms",
-            "Event-driven choreography with eventual consistency",
-            "Hybrid coordination strategy based on workflow characteristics"
+            "Automated testing",
+            "Static analysis",
+            "Deployment validation",
+            "Full pipeline automation"
         ],
         "correct": 3,
-        "explanation": "Distributed workflow coordination requires hybrid strategies adapted to specific workflow characteristics."
+        "explanation": "CI/CD value comes from complete automation."
     },
     {
-        "question": "Which design pattern best addresses the challenge of maintaining workflow state consistency across system failures?",
+        "question": "What is the best way to handle environment configs?",
         "options": [
-            "Write-ahead logging with checkpointing",
-            "Event sourcing with snapshot management",
-            "Distributed transaction with compensation",
-            "Comprehensive fault tolerance architecture"
+            "Custom metadata",
+            "Named credentials",
+            "Hierarchical settings",
+            "Comprehensive config management"
         ],
         "correct": 3,
-        "explanation": "Workflow state consistency requires comprehensive fault tolerance combining logging, events, and transactions."
+        "explanation": "Configuration requires a systematic approach."
     },
     {
-        "question": "What is the optimal approach for implementing complex business process optimization?",
+        "question": "Which approach provides best rollback capability?",
         "options": [
-            "Static process analysis with predetermined optimization",
-            "Dynamic process adaptation based on performance metrics",
-            "Machine learning-driven process improvement",
-            "Comprehensive process optimization framework"
+            "Version control tags",
+            "Deployment packages",
+            "Feature toggles",
+            "Multi-layered rollback"
         ],
         "correct": 3,
-        "explanation": "Business process optimization requires comprehensive frameworks combining static analysis, dynamic adaptation, and ML."
+        "explanation": "Effective rollback requires multiple strategies."
     },
     {
-        "question": "Which approach provides the most robust solution for handling process exceptions and error recovery?",
+        "question": "What is the best way to test governor limits?",
         "options": [
-            "Exception handling with retry logic",
-            "Compensation patterns with rollback",
-            "Dead letter processing with manual intervention",
-            "Comprehensive error handling architecture"
+            "Boundary value tests",
+            "Load testing",
+            "Performance monitoring",
+            "Comprehensive limit testing"
         ],
         "correct": 3,
-        "explanation": "Robust error handling requires comprehensive architecture combining exceptions, compensation, and dead letter processing."
+        "explanation": "Limit testing requires multiple approaches."
     },
     {
-        "question": "What is the primary consideration for implementing cross-system process integration?",
+        "question": "Which deployment monitoring is most effective?",
         "options": [
-            "Data format transformation and validation",
-            "System availability and failure handling",
-            "Security and authentication across boundaries",
-            "Comprehensive integration architecture"
+            "Real-time status",
+            "Post-deploy validation",
+            "Performance monitoring",
+            "Full observability"
         ],
         "correct": 3,
-        "explanation": "Cross-system integration requires comprehensive architecture addressing data, availability, and security concerns."
+        "explanation": "Effective monitoring requires complete visibility."
     },
     {
-        "question": "Which pattern provides optimal performance for high-volume process automation?",
+        "question": "What is the best technical debt strategy?",
         "options": [
-            "Batch processing with parallel execution",
-            "Stream processing with micro-batching",
-            "Event-driven processing with load balancing",
-            "Adaptive processing architecture based on volume patterns"
+            "Regular refactoring",
+            "Automated code analysis",
+            "Debt tracking",
+            "Comprehensive management"
         ],
         "correct": 3,
-        "explanation": "High-volume automation requires adaptive architectures that respond to specific volume and latency patterns."
-    },
-    {
-        "question": "What is the most effective approach for implementing process analytics and monitoring?",
-        "options": [
-            "Real-time metrics collection with dashboards",
-            "Historical analysis with predictive modeling",
-            "Anomaly detection with automated alerting",
-            "Comprehensive process intelligence platform"
-        ],
-        "correct": 3,
-        "explanation": "Process analytics requires comprehensive platforms combining real-time metrics, historical analysis, and anomaly detection."
-    },
-    {
-        "question": "Which approach provides the best solution for implementing complex process versioning?",
-        "options": [
-            "Version control with backward compatibility",
-            "Parallel execution of multiple versions",
-            "Dynamic migration with state preservation",
-            "Comprehensive versioning strategy"
-        ],
-        "correct": 3,
-        "explanation": "Process versioning requires comprehensive strategies addressing compatibility, parallel execution, and migration."
-    },
-    {
-        "question": "What is the optimal strategy for implementing process security in multi-tenant environments?",
-        "options": [
-            "Role-based access control with fine-grained permissions",
-            "Tenant isolation with
+        "explanation": "Debt management requires systematic approach."
+    }
+];

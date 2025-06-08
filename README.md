@@ -3,7 +3,7 @@
 # Salesforce Platform Developer I Mock Exam
 
 > ⚡️ AI-powered practice exam for **Salesforce Platform Developer I certification**, designed to simulate the real exam experience.  
-> ✅ Built by Zacharias and powered by OpenAI's guidance.
+> ✅ Built by Zacharias using a combination of AI tools – Claude was primarily used for content structuring and splitting the test into logical components, while ChatGPT assisted with logic implementation and core functionality. DeepSeek, along with the others, contributed to generating and validating question sets.
 
 ---
 
