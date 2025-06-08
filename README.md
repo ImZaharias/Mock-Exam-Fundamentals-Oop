@@ -118,6 +118,18 @@ Use it to identify your weak areas and build confidence before taking the real e
 **Ready to test your Platform Developer skills?** 🎯  
 **Start the exam and see if you can hit that 68% passing score!**
 
+## 📊 Exam Difficulty Evaluation
+
+Based on the 60-question mock exam attempted:
+
+- **Overall Difficulty Rating**: **7/10**
+- The test contains realistic and well-structured questions, many of which require deep understanding of Salesforce platform fundamentals, Apex execution context, automation tools, and LWC architecture.
+- Most questions are not "trick-based", but demand accurate knowledge of governor limits, trigger behavior, and best practices in development and testing.
+- Multi-select questions and scenario-based cases elevate the challenge.
+- Suitable for candidates who have completed at least 3–4 weeks of focused study, hands-on practice, and mock exams.
+
+> 🧠 Recommendation: Review all incorrect answers thoroughly and reinforce weak categories like Process Automation and Apex context logic to push beyond the 68% passing score.
+
 ---
 
 *Complete AI-generated solution for fast, effective Salesforce certification prep* 🚀
