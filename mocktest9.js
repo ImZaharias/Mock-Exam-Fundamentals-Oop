@@ -1,651 +1,350 @@
 var questions = [
+    // Developer Fundamentals - Expert 19 questions
     {
-        "question": "Which governor limit is most likely to be hit when querying related objects in a loop?",
+        "question": "In a multi-tenant architecture, what is the primary challenge when implementing custom indexing strategies?",
         "options": [
-            "Heap size limit",
-            "SOQL query limit",
-            "DML statement limit",
-            "CPU time limit"
+            "Index fragmentation across tenants",
+            "Selective query optimization with tenant isolation",
+            "Custom index maintenance overhead",
+            "Cross-tenant data leakage prevention"
         ],
         "correct": 1,
-        "explanation": "Placing SOQL queries inside loops can exceed the limit of 100 queries per transaction."
+        "explanation": "Selective query optimization while maintaining tenant isolation is the primary challenge in multi-tenant indexing."
     },
     {
-        "question": "Which governor limit is most likely to be hit when querying related objects in a loop?",
+        "question": "Which approach provides optimal performance for complex hierarchical data processing with deep nesting?",
         "options": [
-            "Heap size limit",
-            "SOQL query limit",
-            "DML statement limit",
-            "CPU time limit"
+            "Recursive Common Table Expressions (CTE)",
+            "Materialized path pattern with custom indexing",
+            "Adjacency list with level-based processing",
+            "Nested set model with interval arithmetic"
         ],
         "correct": 1,
-        "explanation": "Placing SOQL queries inside loops can exceed the limit of 100 queries per transaction."
+        "explanation": "Materialized path pattern with custom indexing provides optimal performance for deep hierarchical structures."
     },
     {
-        "question": "How can a developer ensure proper sharing enforcement when querying in Apex?",
+        "question": "What is the most critical consideration when implementing custom metadata-driven architecture?",
         "options": [
-            "Using with sharing keyword",
-            "Using without sharing keyword",
-            "Using Security.stripInaccessible()",
-            "Using System.runAs()"
+            "Metadata versioning and migration strategies",
+            "Runtime performance impact of dynamic logic",
+            "Security implications of configurable behavior",
+            "All considerations require careful architectural planning"
         ],
-        "correct": 2,
-        "explanation": "`Security.stripInaccessible()` enforces field-level and object-level security in Apex queries."
+        "correct": 3,
+        "explanation": "Metadata-driven architecture requires comprehensive planning for versioning, performance, and security."
     },
     {
-        "question": "Which governor limit is most likely to be hit when querying related objects in a loop?",
+        "question": "Which design pattern best addresses the challenge of maintaining transaction integrity across multiple external systems?",
         "options": [
-            "Heap size limit",
-            "SOQL query limit",
-            "DML statement limit",
-            "CPU time limit"
-        ],
-        "correct": 1,
-        "explanation": "Placing SOQL queries inside loops can exceed the limit of 100 queries per transaction."
-    },
-    {
-        "question": "How can a developer ensure proper sharing enforcement when querying in Apex?",
-        "options": [
-            "Using with sharing keyword",
-            "Using without sharing keyword",
-            "Using Security.stripInaccessible()",
-            "Using System.runAs()"
-        ],
-        "correct": 2,
-        "explanation": "`Security.stripInaccessible()` enforces field-level and object-level security in Apex queries."
-    },
-    {
-        "question": "How can a developer ensure proper sharing enforcement when querying in Apex?",
-        "options": [
-            "Using with sharing keyword",
-            "Using without sharing keyword",
-            "Using Security.stripInaccessible()",
-            "Using System.runAs()"
-        ],
-        "correct": 2,
-        "explanation": "`Security.stripInaccessible()` enforces field-level and object-level security in Apex queries."
-    },
-    {
-        "question": "Which governor limit is most likely to be hit when querying related objects in a loop?",
-        "options": [
-            "Heap size limit",
-            "SOQL query limit",
-            "DML statement limit",
-            "CPU time limit"
+            "Two-phase commit protocol",
+            "Saga pattern with compensating transactions",
+            "Event sourcing with eventual consistency",
+            "Distributed transaction coordinator"
         ],
         "correct": 1,
-        "explanation": "Placing SOQL queries inside loops can exceed the limit of 100 queries per transaction."
+        "explanation": "Saga pattern with compensating transactions is most practical for distributed transaction management."
     },
     {
-        "question": "Which governor limit is most likely to be hit when querying related objects in a loop?",
+        "question": "What is the optimal strategy for handling platform event ordering guarantees in high-volume scenarios?",
         "options": [
-            "Heap size limit",
-            "SOQL query limit",
-            "DML statement limit",
-            "CPU time limit"
+            "Single partition with sequential processing",
+            "Multiple partitions with correlation IDs",
+            "Event sourcing with sequence numbers",
+            "Hybrid approach with partition strategy and sequence validation"
         ],
-        "correct": 1,
-        "explanation": "Placing SOQL queries inside loops can exceed the limit of 100 queries per transaction."
+        "correct": 3,
+        "explanation": "Hybrid approach combining partition strategy with sequence validation provides optimal ordering guarantees."
     },
     {
-        "question": "How can a developer ensure proper sharing enforcement when querying in Apex?",
+        "question": "Which approach provides the most robust solution for handling intermittent external service failures?",
         "options": [
-            "Using with sharing keyword",
-            "Using without sharing keyword",
-            "Using Security.stripInaccessible()",
-            "Using System.runAs()"
+            "Exponential backoff with jitter",
+            "Circuit breaker pattern with fallback",
+            "Retry with dead letter queue",
+            "Comprehensive resilience strategy combining all patterns"
         ],
-        "correct": 2,
-        "explanation": "`Security.stripInaccessible()` enforces field-level and object-level security in Apex queries."
+        "correct": 3,
+        "explanation": "Robust external service integration requires exponential backoff, circuit breakers, and dead letter queues."
     },
     {
-        "question": "How can a developer ensure proper sharing enforcement when querying in Apex?",
+        "question": "What is the primary architectural consideration for implementing event-driven microservices on Salesforce?",
         "options": [
-            "Using with sharing keyword",
-            "Using without sharing keyword",
-            "Using Security.stripInaccessible()",
-            "Using System.runAs()"
+            "Event schema evolution and compatibility",
+            "Service boundary definition and coupling",
+            "Distributed data consistency management",
+            "Comprehensive event-driven architecture strategy"
         ],
-        "correct": 2,
-        "explanation": "`Security.stripInaccessible()` enforces field-level and object-level security in Apex queries."
+        "correct": 3,
+        "explanation": "Event-driven microservices require careful consideration of schemas, boundaries, and data consistency."
     },
     {
-        "question": "How can a developer ensure proper sharing enforcement when querying in Apex?",
+        "question": "Which caching strategy provides optimal performance for frequently changing, user-specific data?",
         "options": [
-            "Using with sharing keyword",
-            "Using without sharing keyword",
-            "Using Security.stripInaccessible()",
-            "Using System.runAs()"
+            "User session-based caching with TTL",
+            "Invalidation-based caching with change tracking",
+            "Predictive caching with machine learning",
+            "Multi-tier caching with intelligent invalidation"
         ],
-        "correct": 2,
-        "explanation": "`Security.stripInaccessible()` enforces field-level and object-level security in Apex queries."
+        "correct": 3,
+        "explanation": "Multi-tier caching with intelligent invalidation provides optimal performance for dynamic user data."
     },
     {
-        "question": "Which governor limit is most likely to be hit when querying related objects in a loop?",
+        "question": "What is the most effective approach for implementing complex business rule engines with high performance requirements?",
         "options": [
-            "Heap size limit",
-            "SOQL query limit",
-            "DML statement limit",
-            "CPU time limit"
+            "Compiled rule expressions with caching",
+            "Decision trees with optimized traversal",
+            "Rule-based inference engines",
+            "Hybrid architecture combining multiple rule evaluation strategies"
         ],
-        "correct": 1,
-        "explanation": "Placing SOQL queries inside loops can exceed the limit of 100 queries per transaction."
+        "correct": 3,
+        "explanation": "High-performance rule engines require hybrid architectures combining multiple evaluation strategies."
     },
     {
-        "question": "Which governor limit is most likely to be hit when querying related objects in a loop?",
+        "question": "Which approach provides the best balance between flexibility and performance for dynamic query generation?",
         "options": [
-            "Heap size limit",
-            "SOQL query limit",
-            "DML statement limit",
-            "CPU time limit"
+            "Query builder pattern with caching",
+            "Template-based queries with parameterization",
+            "Dynamic SOQL with security enforcement",
+            "Adaptive query strategy based on usage patterns"
         ],
-        "correct": 1,
-        "explanation": "Placing SOQL queries inside loops can exceed the limit of 100 queries per transaction."
+        "correct": 3,
+        "explanation": "Adaptive query strategies that adjust based on usage patterns provide optimal flexibility and performance."
     },
     {
-        "question": "How can a developer ensure proper sharing enforcement when querying in Apex?",
+        "question": "What is the primary challenge when implementing distributed locks in a multi-org environment?",
         "options": [
-            "Using with sharing keyword",
-            "Using without sharing keyword",
-            "Using Security.stripInaccessible()",
-            "Using System.runAs()"
+            "Lock timeout and deadlock prevention",
+            "Cross-org communication latency",
+            "Consistency guarantees across network partitions",
+            "Comprehensive distributed synchronization strategy"
         ],
-        "correct": 2,
-        "explanation": "`Security.stripInaccessible()` enforces field-level and object-level security in Apex queries."
+        "correct": 3,
+        "explanation": "Distributed locks require addressing timeouts, latency, and consistency in a comprehensive strategy."
     },
     {
-        "question": "Which governor limit is most likely to be hit when querying related objects in a loop?",
+        "question": "Which approach provides the most efficient solution for processing large-scale data transformations with complex business logic?",
         "options": [
-            "Heap size limit",
-            "SOQL query limit",
-            "DML statement limit",
-            "CPU time limit"
+            "Parallel processing with work partitioning",
+            "Pipeline architecture with streaming",
+            "MapReduce pattern with aggregation",
+            "Hybrid processing architecture optimized for specific data patterns"
         ],
-        "correct": 1,
-        "explanation": "Placing SOQL queries inside loops can exceed the limit of 100 queries per transaction."
+        "correct": 3,
+        "explanation": "Optimal data transformation requires hybrid architectures adapted to specific data and logic patterns."
     },
     {
-        "question": "How can a developer ensure proper sharing enforcement when querying in Apex?",
+        "question": "What is the most critical consideration for implementing custom encryption in Salesforce applications?",
         "options": [
-            "Using with sharing keyword",
-            "Using without sharing keyword",
-            "Using Security.stripInaccessible()",
-            "Using System.runAs()"
+            "Key management and rotation strategies",
+            "Performance impact of encryption operations",
+            "Compliance with data protection regulations",
+            "Holistic security architecture including all encryption aspects"
         ],
-        "correct": 2,
-        "explanation": "`Security.stripInaccessible()` enforces field-level and object-level security in Apex queries."
+        "correct": 3,
+        "explanation": "Custom encryption requires comprehensive security architecture addressing keys, performance, and compliance."
     },
     {
-        "question": "How can a developer ensure proper sharing enforcement when querying in Apex?",
+        "question": "Which design pattern best addresses the challenge of maintaining data consistency in eventually consistent systems?",
         "options": [
-            "Using with sharing keyword",
-            "Using without sharing keyword",
-            "Using Security.stripInaccessible()",
-            "Using System.runAs()"
+            "CQRS with event sourcing",
+            "Saga pattern with compensation",
+            "Two-phase commit with rollback",
+            "Multi-pattern approach based on consistency requirements"
         ],
-        "correct": 2,
-        "explanation": "`Security.stripInaccessible()` enforces field-level and object-level security in Apex queries."
+        "correct": 3,
+        "explanation": "Data consistency in distributed systems requires selecting appropriate patterns based on specific requirements."
     },
     {
-        "question": "How can a developer ensure proper sharing enforcement when querying in Apex?",
+        "question": "What is the optimal approach for implementing real-time analytics on high-volume transactional data?",
         "options": [
-            "Using with sharing keyword",
-            "Using without sharing keyword",
-            "Using Security.stripInaccessible()",
-            "Using System.runAs()"
+            "Stream processing with micro-batching",
+            "Lambda architecture with batch and stream layers",
+            "Kappa architecture with unified streaming",
+            "Adaptive architecture based on data velocity and latency requirements"
         ],
-        "correct": 2,
-        "explanation": "`Security.stripInaccessible()` enforces field-level and object-level security in Apex queries."
+        "correct": 3,
+        "explanation": "Real-time analytics requires adaptive architectures that respond to specific velocity and latency needs."
     },
     {
-        "question": "Which governor limit is most likely to be hit when querying related objects in a loop?",
+        "question": "Which approach provides the most robust solution for handling schema evolution in event-driven architectures?",
         "options": [
-            "Heap size limit",
-            "SOQL query limit",
-            "DML statement limit",
-            "CPU time limit"
+            "Schema registry with compatibility rules",
+            "Versioned event contracts with migration",
+            "Flexible schema with backward compatibility",
+            "Comprehensive schema governance strategy"
         ],
-        "correct": 1,
-        "explanation": "Placing SOQL queries inside loops can exceed the limit of 100 queries per transaction."
+        "correct": 3,
+        "explanation": "Schema evolution requires comprehensive governance including registries, versioning, and compatibility strategies."
     },
     {
-        "question": "Which automation tool allows looping over multiple related child records?",
+        "question": "What is the primary architectural consideration for implementing multi-region disaster recovery?",
         "options": [
-            "Validation Rules",
-            "Workflow Rules",
-            "Flows",
-            "Assignment Rules"
+            "Data replication strategies and consistency",
+            "Failover mechanisms and recovery time objectives",
+            "Network partitioning and split-brain scenarios",
+            "Comprehensive disaster recovery architecture"
         ],
-        "correct": 2,
-        "explanation": "Flows provide looping capabilities which other declarative tools do not."
+        "correct": 3,
+        "explanation": "Multi-region disaster recovery requires comprehensive architecture addressing replication, failover, and partitioning."
     },
     {
-        "question": "What happens if a record update in a before trigger causes the same trigger to execute again?",
+        "question": "Which approach provides optimal performance for complex graph traversal operations on large datasets?",
         "options": [
-            "It recursively re-executes indefinitely",
-            "It throws an error automatically",
-            "Recursion must be prevented manually",
-            "Salesforce blocks the trigger"
+            "Adjacency list with recursive queries",
+            "Graph database with specialized algorithms",
+            "Materialized graph views with caching",
+            "Hybrid graph processing optimized for specific traversal patterns"
         ],
-        "correct": 2,
-        "explanation": "Triggers are not recursive by default, but manual logic must be implemented to prevent it."
+        "correct": 3,
+        "explanation": "Optimal graph traversal requires hybrid approaches optimized for specific graph structures and access patterns."
     },
     {
-        "question": "What happens if a record update in a before trigger causes the same trigger to execute again?",
+        "question": "What is the most effective strategy for implementing zero-downtime deployments in complex enterprise environments?",
         "options": [
-            "It recursively re-executes indefinitely",
-            "It throws an error automatically",
-            "Recursion must be prevented manually",
-            "Salesforce blocks the trigger"
+            "Blue-green deployment with database migration",
+            "Rolling deployment with feature toggles",
+            "Canary deployment with automated rollback",
+            "Comprehensive deployment strategy combining multiple approaches"
         ],
-        "correct": 2,
-        "explanation": "Triggers are not recursive by default, but manual logic must be implemented to prevent it."
+        "correct": 3,
+        "explanation": "Zero-downtime deployments in complex environments require combining multiple deployment strategies."
+    },
+
+    // Process Automation & Logic - Expert 17 questions
+    {
+        "question": "What is the optimal approach for implementing complex state machines with multiple parallel workflows?",
+        "options": [
+            "Nested state management with synchronization points",
+            "Actor model with message passing",
+            "Workflow orchestration with compensation logic",
+            "Comprehensive state management architecture"
+        ],
+        "correct": 3,
+        "explanation": "Complex state machines require comprehensive architecture addressing nested states, parallelism, and synchronization."
     },
     {
-        "question": "Which automation tool allows looping over multiple related child records?",
+        "question": "Which pattern provides the most robust solution for handling long-running business processes with human intervention?",
         "options": [
-            "Validation Rules",
-            "Workflow Rules",
-            "Flows",
-            "Assignment Rules"
+            "Saga pattern with human task management",
+            "Workflow orchestration with pause/resume",
+            "Event-driven process management",
+            "Hybrid process architecture with multiple interaction patterns"
         ],
-        "correct": 2,
-        "explanation": "Flows provide looping capabilities which other declarative tools do not."
+        "correct": 3,
+        "explanation": "Long-running processes with human intervention require hybrid architectures combining multiple patterns."
     },
     {
-        "question": "What happens if a record update in a before trigger causes the same trigger to execute again?",
+        "question": "What is the primary challenge when implementing real-time business rule evaluation at scale?",
         "options": [
-            "It recursively re-executes indefinitely",
-            "It throws an error automatically",
-            "Recursion must be prevented manually",
-            "Salesforce blocks the trigger"
+            "Rule compilation and optimization",
+            "Concurrent rule execution with consistency",
+            "Rule versioning and hot deployment",
+            "Comprehensive rule engine architecture"
         ],
-        "correct": 2,
-        "explanation": "Triggers are not recursive by default, but manual logic must be implemented to prevent it."
+        "correct": 3,
+        "explanation": "Scalable rule evaluation requires addressing compilation, concurrency, versioning, and deployment challenges."
     },
     {
-        "question": "Which automation tool allows looping over multiple related child records?",
+        "question": "Which approach provides optimal performance for complex approval workflows with dynamic routing?",
         "options": [
-            "Validation Rules",
-            "Workflow Rules",
-            "Flows",
-            "Assignment Rules"
+            "Rule-based routing with caching",
+            "Graph-based workflow with optimization",
+            "Machine learning-driven routing decisions",
+            "Adaptive routing architecture with multiple strategies"
         ],
-        "correct": 2,
-        "explanation": "Flows provide looping capabilities which other declarative tools do not."
+        "correct": 3,
+        "explanation": "Complex approval workflows require adaptive architectures combining rule-based, graph-based, and ML approaches."
     },
     {
-        "question": "Which automation tool allows looping over multiple related child records?",
+        "question": "What is the most effective strategy for implementing distributed workflow coordination?",
         "options": [
-            "Validation Rules",
-            "Workflow Rules",
-            "Flows",
-            "Assignment Rules"
+            "Centralized orchestration with distributed execution",
+            "Peer-to-peer coordination with consensus algorithms",
+            "Event-driven choreography with eventual consistency",
+            "Hybrid coordination strategy based on workflow characteristics"
         ],
-        "correct": 2,
-        "explanation": "Flows provide looping capabilities which other declarative tools do not."
+        "correct": 3,
+        "explanation": "Distributed workflow coordination requires hybrid strategies adapted to specific workflow characteristics."
     },
     {
-        "question": "What happens if a record update in a before trigger causes the same trigger to execute again?",
+        "question": "Which design pattern best addresses the challenge of maintaining workflow state consistency across system failures?",
         "options": [
-            "It recursively re-executes indefinitely",
-            "It throws an error automatically",
-            "Recursion must be prevented manually",
-            "Salesforce blocks the trigger"
+            "Write-ahead logging with checkpointing",
+            "Event sourcing with snapshot management",
+            "Distributed transaction with compensation",
+            "Comprehensive fault tolerance architecture"
         ],
-        "correct": 2,
-        "explanation": "Triggers are not recursive by default, but manual logic must be implemented to prevent it."
+        "correct": 3,
+        "explanation": "Workflow state consistency requires comprehensive fault tolerance combining logging, events, and transactions."
     },
     {
-        "question": "Which automation tool allows looping over multiple related child records?",
+        "question": "What is the optimal approach for implementing complex business process optimization?",
         "options": [
-            "Validation Rules",
-            "Workflow Rules",
-            "Flows",
-            "Assignment Rules"
+            "Static process analysis with predetermined optimization",
+            "Dynamic process adaptation based on performance metrics",
+            "Machine learning-driven process improvement",
+            "Comprehensive process optimization framework"
         ],
-        "correct": 2,
-        "explanation": "Flows provide looping capabilities which other declarative tools do not."
+        "correct": 3,
+        "explanation": "Business process optimization requires comprehensive frameworks combining static analysis, dynamic adaptation, and ML."
     },
     {
-        "question": "What happens if a record update in a before trigger causes the same trigger to execute again?",
+        "question": "Which approach provides the most robust solution for handling process exceptions and error recovery?",
         "options": [
-            "It recursively re-executes indefinitely",
-            "It throws an error automatically",
-            "Recursion must be prevented manually",
-            "Salesforce blocks the trigger"
+            "Exception handling with retry logic",
+            "Compensation patterns with rollback",
+            "Dead letter processing with manual intervention",
+            "Comprehensive error handling architecture"
         ],
-        "correct": 2,
-        "explanation": "Triggers are not recursive by default, but manual logic must be implemented to prevent it."
+        "correct": 3,
+        "explanation": "Robust error handling requires comprehensive architecture combining exceptions, compensation, and dead letter processing."
     },
     {
-        "question": "Which automation tool allows looping over multiple related child records?",
+        "question": "What is the primary consideration for implementing cross-system process integration?",
         "options": [
-            "Validation Rules",
-            "Workflow Rules",
-            "Flows",
-            "Assignment Rules"
+            "Data format transformation and validation",
+            "System availability and failure handling",
+            "Security and authentication across boundaries",
+            "Comprehensive integration architecture"
         ],
-        "correct": 2,
-        "explanation": "Flows provide looping capabilities which other declarative tools do not."
+        "correct": 3,
+        "explanation": "Cross-system integration requires comprehensive architecture addressing data, availability, and security concerns."
     },
     {
-        "question": "Which automation tool allows looping over multiple related child records?",
+        "question": "Which pattern provides optimal performance for high-volume process automation?",
         "options": [
-            "Validation Rules",
-            "Workflow Rules",
-            "Flows",
-            "Assignment Rules"
+            "Batch processing with parallel execution",
+            "Stream processing with micro-batching",
+            "Event-driven processing with load balancing",
+            "Adaptive processing architecture based on volume patterns"
         ],
-        "correct": 2,
-        "explanation": "Flows provide looping capabilities which other declarative tools do not."
+        "correct": 3,
+        "explanation": "High-volume automation requires adaptive architectures that respond to specific volume and latency patterns."
     },
     {
-        "question": "What happens if a record update in a before trigger causes the same trigger to execute again?",
+        "question": "What is the most effective approach for implementing process analytics and monitoring?",
         "options": [
-            "It recursively re-executes indefinitely",
-            "It throws an error automatically",
-            "Recursion must be prevented manually",
-            "Salesforce blocks the trigger"
+            "Real-time metrics collection with dashboards",
+            "Historical analysis with predictive modeling",
+            "Anomaly detection with automated alerting",
+            "Comprehensive process intelligence platform"
         ],
-        "correct": 2,
-        "explanation": "Triggers are not recursive by default, but manual logic must be implemented to prevent it."
+        "correct": 3,
+        "explanation": "Process analytics requires comprehensive platforms combining real-time metrics, historical analysis, and anomaly detection."
     },
     {
-        "question": "Which automation tool allows looping over multiple related child records?",
+        "question": "Which approach provides the best solution for implementing complex process versioning?",
         "options": [
-            "Validation Rules",
-            "Workflow Rules",
-            "Flows",
-            "Assignment Rules"
+            "Version control with backward compatibility",
+            "Parallel execution of multiple versions",
+            "Dynamic migration with state preservation",
+            "Comprehensive versioning strategy"
         ],
-        "correct": 2,
-        "explanation": "Flows provide looping capabilities which other declarative tools do not."
+        "correct": 3,
+        "explanation": "Process versioning requires comprehensive strategies addressing compatibility, parallel execution, and migration."
     },
     {
-        "question": "What happens if a record update in a before trigger causes the same trigger to execute again?",
+        "question": "What is the optimal strategy for implementing process security in multi-tenant environments?",
         "options": [
-            "It recursively re-executes indefinitely",
-            "It throws an error automatically",
-            "Recursion must be prevented manually",
-            "Salesforce blocks the trigger"
-        ],
-        "correct": 2,
-        "explanation": "Triggers are not recursive by default, but manual logic must be implemented to prevent it."
-    },
-    {
-        "question": "What happens if a record update in a before trigger causes the same trigger to execute again?",
-        "options": [
-            "It recursively re-executes indefinitely",
-            "It throws an error automatically",
-            "Recursion must be prevented manually",
-            "Salesforce blocks the trigger"
-        ],
-        "correct": 2,
-        "explanation": "Triggers are not recursive by default, but manual logic must be implemented to prevent it."
-    },
-    {
-        "question": "What happens if a record update in a before trigger causes the same trigger to execute again?",
-        "options": [
-            "It recursively re-executes indefinitely",
-            "It throws an error automatically",
-            "Recursion must be prevented manually",
-            "Salesforce blocks the trigger"
-        ],
-        "correct": 2,
-        "explanation": "Triggers are not recursive by default, but manual logic must be implemented to prevent it."
-    },
-    {
-        "question": "What is the role of `@track` in Lightning Web Components?",
-        "options": [
-            "It binds a property to the UI",
-            "It enables reactive rendering",
-            "It makes methods public",
-            "It declares private variables"
-        ],
-        "correct": 1,
-        "explanation": "`@track` marks properties as reactive for re-rendering when their values change."
-    },
-    {
-        "question": "How can you prevent default form submission in an LWC?",
-        "options": [
-            "event.preventDefault()",
-            "event.cancel()",
-            "event.stopPropagation()",
-            "form.prevent()"
-        ],
-        "correct": 0,
-        "explanation": "`event.preventDefault()` stops the form from performing a full page reload."
-    },
-    {
-        "question": "What is the role of `@track` in Lightning Web Components?",
-        "options": [
-            "It binds a property to the UI",
-            "It enables reactive rendering",
-            "It makes methods public",
-            "It declares private variables"
-        ],
-        "correct": 1,
-        "explanation": "`@track` marks properties as reactive for re-rendering when their values change."
-    },
-    {
-        "question": "How can you prevent default form submission in an LWC?",
-        "options": [
-            "event.preventDefault()",
-            "event.cancel()",
-            "event.stopPropagation()",
-            "form.prevent()"
-        ],
-        "correct": 0,
-        "explanation": "`event.preventDefault()` stops the form from performing a full page reload."
-    },
-    {
-        "question": "What is the role of `@track` in Lightning Web Components?",
-        "options": [
-            "It binds a property to the UI",
-            "It enables reactive rendering",
-            "It makes methods public",
-            "It declares private variables"
-        ],
-        "correct": 1,
-        "explanation": "`@track` marks properties as reactive for re-rendering when their values change."
-    },
-    {
-        "question": "How can you prevent default form submission in an LWC?",
-        "options": [
-            "event.preventDefault()",
-            "event.cancel()",
-            "event.stopPropagation()",
-            "form.prevent()"
-        ],
-        "correct": 0,
-        "explanation": "`event.preventDefault()` stops the form from performing a full page reload."
-    },
-    {
-        "question": "What is the role of `@track` in Lightning Web Components?",
-        "options": [
-            "It binds a property to the UI",
-            "It enables reactive rendering",
-            "It makes methods public",
-            "It declares private variables"
-        ],
-        "correct": 1,
-        "explanation": "`@track` marks properties as reactive for re-rendering when their values change."
-    },
-    {
-        "question": "How can you prevent default form submission in an LWC?",
-        "options": [
-            "event.preventDefault()",
-            "event.cancel()",
-            "event.stopPropagation()",
-            "form.prevent()"
-        ],
-        "correct": 0,
-        "explanation": "`event.preventDefault()` stops the form from performing a full page reload."
-    },
-    {
-        "question": "How can you prevent default form submission in an LWC?",
-        "options": [
-            "event.preventDefault()",
-            "event.cancel()",
-            "event.stopPropagation()",
-            "form.prevent()"
-        ],
-        "correct": 0,
-        "explanation": "`event.preventDefault()` stops the form from performing a full page reload."
-    },
-    {
-        "question": "What is the role of `@track` in Lightning Web Components?",
-        "options": [
-            "It binds a property to the UI",
-            "It enables reactive rendering",
-            "It makes methods public",
-            "It declares private variables"
-        ],
-        "correct": 1,
-        "explanation": "`@track` marks properties as reactive for re-rendering when their values change."
-    },
-    {
-        "question": "How can you prevent default form submission in an LWC?",
-        "options": [
-            "event.preventDefault()",
-            "event.cancel()",
-            "event.stopPropagation()",
-            "form.prevent()"
-        ],
-        "correct": 0,
-        "explanation": "`event.preventDefault()` stops the form from performing a full page reload."
-    },
-    {
-        "question": "How can you prevent default form submission in an LWC?",
-        "options": [
-            "event.preventDefault()",
-            "event.cancel()",
-            "event.stopPropagation()",
-            "form.prevent()"
-        ],
-        "correct": 0,
-        "explanation": "`event.preventDefault()` stops the form from performing a full page reload."
-    },
-    {
-        "question": "What is the role of `@track` in Lightning Web Components?",
-        "options": [
-            "It binds a property to the UI",
-            "It enables reactive rendering",
-            "It makes methods public",
-            "It declares private variables"
-        ],
-        "correct": 1,
-        "explanation": "`@track` marks properties as reactive for re-rendering when their values change."
-    },
-    {
-        "question": "What is the role of `@track` in Lightning Web Components?",
-        "options": [
-            "It binds a property to the UI",
-            "It enables reactive rendering",
-            "It makes methods public",
-            "It declares private variables"
-        ],
-        "correct": 1,
-        "explanation": "`@track` marks properties as reactive for re-rendering when their values change."
-    },
-    {
-        "question": "How can you test asynchronous Apex like Queueable?",
-        "options": [
-            "Using Future methods",
-            "Enqueue from a batch class",
-            "Test.startTest and Test.stopTest",
-            "Use system log"
-        ],
-        "correct": 2,
-        "explanation": "Asynchronous Apex should be tested within Test.startTest/stopTest blocks to ensure execution."
-    },
-    {
-        "question": "How can you test asynchronous Apex like Queueable?",
-        "options": [
-            "Using Future methods",
-            "Enqueue from a batch class",
-            "Test.startTest and Test.stopTest",
-            "Use system log"
-        ],
-        "correct": 2,
-        "explanation": "Asynchronous Apex should be tested within Test.startTest/stopTest blocks to ensure execution."
-    },
-    {
-        "question": "What\u2019s a best practice for testing Apex triggers?",
-        "options": [
-            "Use seeAllData=true",
-            "Use mock callouts",
-            "Use Test.startTest and Test.stopTest",
-            "Directly modify production data"
-        ],
-        "correct": 2,
-        "explanation": "`Test.startTest()` and `Test.stopTest()` should be used to isolate and test specific trigger logic."
-    },
-    {
-        "question": "How can you test asynchronous Apex like Queueable?",
-        "options": [
-            "Using Future methods",
-            "Enqueue from a batch class",
-            "Test.startTest and Test.stopTest",
-            "Use system log"
-        ],
-        "correct": 2,
-        "explanation": "Asynchronous Apex should be tested within Test.startTest/stopTest blocks to ensure execution."
-    },
-    {
-        "question": "What\u2019s a best practice for testing Apex triggers?",
-        "options": [
-            "Use seeAllData=true",
-            "Use mock callouts",
-            "Use Test.startTest and Test.stopTest",
-            "Directly modify production data"
-        ],
-        "correct": 2,
-        "explanation": "`Test.startTest()` and `Test.stopTest()` should be used to isolate and test specific trigger logic."
-    },
-    {
-        "question": "What\u2019s a best practice for testing Apex triggers?",
-        "options": [
-            "Use seeAllData=true",
-            "Use mock callouts",
-            "Use Test.startTest and Test.stopTest",
-            "Directly modify production data"
-        ],
-        "correct": 2,
-        "explanation": "`Test.startTest()` and `Test.stopTest()` should be used to isolate and test specific trigger logic."
-    },
-    {
-        "question": "How can you test asynchronous Apex like Queueable?",
-        "options": [
-            "Using Future methods",
-            "Enqueue from a batch class",
-            "Test.startTest and Test.stopTest",
-            "Use system log"
-        ],
-        "correct": 2,
-        "explanation": "Asynchronous Apex should be tested within Test.startTest/stopTest blocks to ensure execution."
-    },
-    {
-        "question": "What\u2019s a best practice for testing Apex triggers?",
-        "options": [
-            "Use seeAllData=true",
-            "Use mock callouts",
-            "Use Test.startTest and Test.stopTest",
-            "Directly modify production data"
-        ],
-        "correct": 2,
-        "explanation": "`Test.startTest()` and `Test.stopTest()` should be used to isolate and test specific trigger logic."
-    },
-    {
-        "question": "How can you test asynchronous Apex like Queueable?",
-        "options": [
-            "Using Future methods",
-            "Enqueue from a batch class",
-            "Test.startTest and Test.stopTest",
-            "Use system log"
-        ],
-        "correct": 2,
-        "explanation": "Asynchronous Apex should be tested within Test.startTest/stopTest blocks to ensure execution."
-    }
-];
+            "Role-based access control with fine-grained permissions",
+            "Tenant isolation with
