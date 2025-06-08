@@ -27,6 +27,12 @@ const categories = {
     }
 };
 
+questions.forEach(q => {
+    if (!Array.isArray(q.correct)) {
+        q.correct = [q.correct];
+    }
+});
+
 function initializeExam() {
     startTimer();
     showQuestion(0);
@@ -111,17 +117,31 @@ function showQuestion(index) {
 }
 
 function selectAnswer(questionIndex, answerIndex) {
-    answers[questionIndex] = answerIndex;
-    
-    // Update the visual selection
-    document.querySelectorAll('.option').forEach(option => {
-        option.classList.remove('selected');
+    if (!Array.isArray(answers[questionIndex])) {
+        answers[questionIndex] = [];
+    }
+
+    const selected = answers[questionIndex];
+    const answerPos = selected.indexOf(answerIndex);
+
+    if (answerPos === -1) {
+        // Add answer if not already selected (max 3 selections)
+        if (selected.length < 3) {
+            selected.push(answerIndex);
+        }
+    } else {
+        // Deselect if already selected
+        selected.splice(answerPos, 1);
+    }
+
+    // Re-render selected options
+    document.querySelectorAll('.option').forEach((option, i) => {
+        option.classList.toggle('selected', answers[questionIndex].includes(i));
     });
-    document.querySelectorAll('.option')[answerIndex].classList.add('selected');
-    
-    // Update answered count
+
+    // Update answered count (optional: only count fully answered?)
     document.querySelector('.question-header div:last-child').textContent = 
-        `${Object.keys(answers).length} Answered`;
+        `${Object.keys(answers).filter(q => answers[q].length > 0).length} Answered`;
 }
 
 function nextQuestion() {
@@ -160,7 +180,12 @@ function calculateCategoryResults() {
     questions.forEach((question, index) => {
         const category = getCategoryForQuestion(index);
         const userAnswer = answers[index];
-        const isCorrect = userAnswer === question.correct;
+        const isCorrect = Array.isArray(question.correct)
+        ? Array.isArray(userAnswer) &&
+        question.correct.length === userAnswer.length &&
+        question.correct.every(val => userAnswer.includes(val))
+        : userAnswer === question.correct;
+
         
         if (isCorrect) {
             categoryResults[category].correct++;
@@ -211,7 +236,11 @@ function submitExam() {
     
     questions.forEach((question, index) => {
         const userAnswer = answers[index];
-        const isCorrect = userAnswer === question.correct;
+        const isCorrect = Array.isArray(question.correct)
+        ? Array.isArray(userAnswer) &&
+        question.correct.length === userAnswer.length &&
+        question.correct.every(val => userAnswer.includes(val))
+        : userAnswer === question.correct;
         const category = getCategoryForQuestion(index);
         
         if (isCorrect) correctAnswers++;
@@ -230,7 +259,8 @@ function submitExam() {
                 </div>
                 <div class="question-preview">${question.question}</div>
                 <div class="question-preview">${question.explanation}</div>
-                ${!isCorrect ? `<div class="correct-answer">Correct answer: ${String.fromCharCode(65 + question.correct)}</div>` : ''}
+                ${!isCorrect ? `<div class="correct-answer">Correct answer: ${
+                question.correct.map(i => String.fromCharCode(65 + i)).join(', ')}</div>` : ''}
             </div>
         `;
     });
