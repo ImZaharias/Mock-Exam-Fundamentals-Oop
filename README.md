@@ -23,16 +23,12 @@ A complete exam simulation built for **realistic preparation**:
 
 ## 🌐 Live Demo
 
-<<<<<<< HEAD
 👉 **[Open the Demo](https://imzaharias.github.io/Salesforce-Platform-Developer-I-Mock-Exam/)**
 
 ---
 
 ## 💻 Local Setup
 
-=======
-### 💻 Local Setup
->>>>>>> 8f3c494e0a737cb8474fbe4321669e604ecda3b5
 ```bash
 git clone https://github.com/ImZaharias/salesforce-platform-dev-exam.git
 cd salesforce-platform-dev-exam
@@ -43,7 +39,6 @@ cd salesforce-platform-dev-exam
 
 ## 📊 Exam Categories & Distribution
 
-<<<<<<< HEAD
 | Category                     | Questions | Percentage |
 |-----------------------------|-----------|------------|
 | **Developer Fundamentals**  | 19        | 31.7%      |
@@ -51,14 +46,6 @@ cd salesforce-platform-dev-exam
 | **User Interface**          | 14        | 23.3%      |
 | **Testing & Deployment**    | 10        | 16.7%      |
 | **Total**                   | 60        | 100%       |
-=======
-| Category | Questions | Percentage |
-|----------|-----------|------------|
-| **Developer Fundamentals** | 19 questions | 31.7% |
-| **Process Automation & Logic** | 17 questions | 28.3% |
-| **User Interface** | 14 questions | 23.3%% |
-| **Testing & Deployment** | 10 questions | 16.7% |
->>>>>>> 8f3c494e0a737cb8474fbe4321669e604ecda3b5
 
 ---
 
