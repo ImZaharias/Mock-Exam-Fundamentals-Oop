@@ -1,4 +1,4 @@
-var bossLevelQuestions = [
+var questions = [
     // Developer Fundamentals - Advanced (19 questions)
     {
         "question": "When implementing a multi-tenant architecture with shared codebase but separate data isolation, which pattern is most effective?",
