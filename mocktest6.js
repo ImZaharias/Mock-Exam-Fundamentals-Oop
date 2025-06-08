@@ -12,15 +12,15 @@ var questions = [
         "category": "Developer Fundamentals"
     },
     {
-        "question": "What is the key difference between Database.insert() and the insert statement?",
+        "question": "Which statement about SOQL queries is correct?",
         "options": [
-            "Database.insert() is faster",
-            "Database.insert() allows partial success with allOrNone parameter",
-            "insert statement is deprecated",
-            "No functional difference exists"
+            "SOQL keywords are case-sensitive",
+            "SOQL can query any Salesforce object with proper permissions",
+            "SELECT * is supported to query all fields",
+            "SOQL queries have no record limits"
         ],
         "correct": 1,
-        "explanation": "Database.insert() offers the allOrNone parameter (default true) that allows partial success, while insert statement follows all-or-none behavior.",
+        "explanation": "SOQL can query any accessible Salesforce object. Keywords are case-insensitive, SELECT * is not supported, and there are record limits.",
         "category": "Developer Fundamentals"
     },
     {
@@ -36,15 +36,18 @@ var questions = [
         "category": "Developer Fundamentals"
     },
     {
-        "question": "Which statement about SOQL queries is correct?",
+        "question": "Which SOQL queries are valid? (Select 2)",
         "options": [
-            "SOQL keywords are case-sensitive",
-            "SOQL can query any Salesforce object with proper permissions",
-            "SELECT * is supported to query all fields",
-            "SOQL queries have no record limits"
+            "SELECT Name FROM Account WHERE Name LIKE '%test%'",
+            "SELECT * FROM Account",
+            "SELECT Name FROM Account ORDER BY Name LIMIT 10",
+            "SELECT COUNT() FROM Account GROUP BY Type"
         ],
-        "correct": 1,
-        "explanation": "SOQL can query any accessible Salesforce object. Keywords are case-insensitive, SELECT * is not supported, and there are record limits.",
+        "correct": [
+            0,
+            2
+        ],
+        "explanation": "Options A and C use valid SOQL syntax. SELECT * is not supported, and aggregate queries require proper field selection or aliases.",
         "category": "Developer Fundamentals"
     },
     {
@@ -60,18 +63,15 @@ var questions = [
         "category": "Developer Fundamentals"
     },
     {
-        "question": "Which SOQL queries are valid? (Select 2)",
+        "question": "What is the key difference between Database.insert() and the insert statement?",
         "options": [
-            "SELECT Name FROM Account WHERE Name LIKE '%test%'",
-            "SELECT * FROM Account",
-            "SELECT Name FROM Account ORDER BY Name LIMIT 10",
-            "SELECT COUNT() FROM Account GROUP BY Type"
+            "Database.insert() is faster",
+            "Database.insert() allows partial success with allOrNone parameter",
+            "insert statement is deprecated",
+            "No functional difference exists"
         ],
-        "correct": [
-            0,
-            2
-        ],
-        "explanation": "Options A and C use valid SOQL syntax. SELECT * is not supported, and aggregate queries require proper field selection or aliases.",
+        "correct": 1,
+        "explanation": "Database.insert() offers the allOrNone parameter (default true) that allows partial success, while insert statement follows all-or-none behavior.",
         "category": "Developer Fundamentals"
     },
     {
