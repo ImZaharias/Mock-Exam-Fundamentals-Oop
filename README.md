@@ -99,6 +99,14 @@ cd salesforce-platform-dev-exam
 
 **Demonstrates how AI can rapidly build professional-grade educational tools for certification preparation.**
 
+**updates 
+
+💡 Questions created with Claude AI for realistic exam-level difficulty
+
+🛠️ Logic, timer, scoring, multi-select handling refactored using ChatGPT
+
+🎯 Designed by a real Platform Developer I candidate — and used to pass!**
+
 ---
 
 ## 🏆 Success Story
