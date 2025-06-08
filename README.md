@@ -38,10 +38,10 @@ cd salesforce-platform-dev-exam
 
 | Category | Questions | Percentage |
 |----------|-----------|------------|
-| **Developer Fundamentals** | 14 questions | 23% |
-| **Process Automation & Logic** | 18 questions | 30% |
-| **User Interface** | 15 questions | 25% |
-| **Testing & Deployment** | 13 questions | 22% |
+| **Developer Fundamentals** | 19 questions | 31.7% |
+| **Process Automation & Logic** | 17 questions | 28.3% |
+| **User Interface** | 14 questions | 23.3%% |
+| **Testing & Deployment** | 10 questions | 16.7% |
 
 ---
 
@@ -105,7 +105,6 @@ cd salesforce-platform-dev-exam
 
 🛠️ Logic, timer, scoring, multi-select handling refactored using ChatGPT
 
-🎯 Designed by a real Platform Developer I candidate — and used to pass!**
 
 ---
 
