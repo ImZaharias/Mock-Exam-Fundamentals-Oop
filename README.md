@@ -106,12 +106,6 @@ Easily build your own variation or extend questions.
 - 105 minutes for full test experience
 - No installation or login needed
 
-**updates 
-
-💡 Questions created with Claude AI for realistic exam-level difficulty
-
-🛠️ Logic, timer, scoring, multi-select handling refactored using ChatGPT
-
 ---
 
 ## 🏆 Success Story
@@ -123,22 +117,8 @@ Easily build your own variation or extend questions.
 
 **Ready to test your Salesforce skills?** 🎯  
 Take the challenge and see if you can pass with 68% or more!
+
 👉 **[Start Now!!!](https://imzaharias.github.io/Salesforce-Platform-Developer-I-Mock-Exam/)**
-
-### 🌐 Live Demo
-**[(https://imzaharias.github.io/Salesforce-Platform-Developer-I-Mock-Exam/)]**
-
-## 📊 Exam Difficulty Evaluation
-
-Based on the 60-question mock exam attempted:
-
-- **Overall Difficulty Rating**: **7/10**
-- The test contains realistic and well-structured questions, many of which require deep understanding of Salesforce platform fundamentals, Apex execution context, automation tools, and LWC architecture.
-- Most questions are not "trick-based", but demand accurate knowledge of governor limits, trigger behavior, and best practices in development and testing.
-- Multi-select questions and scenario-based cases elevate the challenge.
-- Suitable for candidates who have completed at least 3–4 weeks of focused study, hands-on practice, and mock exams.
-
-> 🧠 Recommendation: Review all incorrect answers thoroughly and reinforce weak categories like Process Automation and Apex context logic to push beyond the 68% passing score.
 
 ---
 
