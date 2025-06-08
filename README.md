@@ -22,9 +22,6 @@ Complete mock exam simulation:
 
 ## 🚀 Quick Start
 
-### 🌐 Live Demo
-**[(https://imzaharias.github.io/Salesforce-Platform-Developer-I-Mock-Exam/)]**
-
 ### 💻 Local Setup
 ```bash
 git clone https://github.com/ImZaharias/salesforce-platform-dev-exam.git
@@ -105,7 +102,6 @@ cd salesforce-platform-dev-exam
 
 🛠️ Logic, timer, scoring, multi-select handling refactored using ChatGPT
 
-
 ---
 
 ## 🏆 Success Story
@@ -117,6 +113,9 @@ Use it to identify your weak areas and build confidence before taking the real e
 
 **Ready to test your Platform Developer skills?** 🎯  
 **Start the exam and see if you can hit that 68% passing score!**
+
+### 🌐 Live Demo
+**[(https://imzaharias.github.io/Salesforce-Platform-Developer-I-Mock-Exam/)]**
 
 ## 📊 Exam Difficulty Evaluation
 
