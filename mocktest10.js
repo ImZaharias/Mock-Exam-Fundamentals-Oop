@@ -1,89 +1,651 @@
 var questions = [
     {
-        "question": "What is the maximum number of records that can be processed in a single DML statement?",
+        "question": "Which interface must be implemented to allow Apex code to be called from a Lightning component?",
         "options": [
-            "100",
-            "200",
-            "500",
-            "10,000"
+            "Schedulable",
+            "Queueable",
+            "AuraEnabled",
+            "Database.Batchable"
+        ],
+        "correct": 2,
+        "explanation": "`@AuraEnabled` methods are required for Apex to be accessed from LWC or Aura components."
+    },
+    {
+        "question": "Which interface must be implemented to allow Apex code to be called from a Lightning component?",
+        "options": [
+            "Schedulable",
+            "Queueable",
+            "AuraEnabled",
+            "Database.Batchable"
+        ],
+        "correct": 2,
+        "explanation": "`@AuraEnabled` methods are required for Apex to be accessed from LWC or Aura components."
+    },
+    {
+        "question": "How does the 'with sharing' keyword impact data access in Apex classes?",
+        "options": [
+            "It restricts field visibility",
+            "It enforces user-level sharing rules",
+            "It overrides CRUD permissions",
+            "It hides private fields"
         ],
         "correct": 1,
-        "explanation": "A single DML statement can process up to 200 records. This applies to insert, update, delete, and upsert operations.",
-        "category": "Developer Fundamentals"
+        "explanation": "`with sharing` enforces sharing rules based on the current user context."
     },
     {
-        "question": "Which statement about SOQL queries is correct?",
+        "question": "Which interface must be implemented to allow Apex code to be called from a Lightning component?",
         "options": [
-            "SOQL keywords are case-sensitive",
-            "SOQL can query any Salesforce object with proper permissions",
-            "SELECT * is supported to query all fields",
-            "SOQL queries have no record limits"
+            "Schedulable",
+            "Queueable",
+            "AuraEnabled",
+            "Database.Batchable"
+        ],
+        "correct": 2,
+        "explanation": "`@AuraEnabled` methods are required for Apex to be accessed from LWC or Aura components."
+    },
+    {
+        "question": "How does the 'with sharing' keyword impact data access in Apex classes?",
+        "options": [
+            "It restricts field visibility",
+            "It enforces user-level sharing rules",
+            "It overrides CRUD permissions",
+            "It hides private fields"
         ],
         "correct": 1,
-        "explanation": "SOQL can query any accessible Salesforce object. Keywords are case-insensitive, SELECT * is not supported, and there are record limits.",
-        "category": "Developer Fundamentals"
+        "explanation": "`with sharing` enforces sharing rules based on the current user context."
     },
     {
-        "question": "Which SOQL queries are valid? (Select 2)",
+        "question": "How does the 'with sharing' keyword impact data access in Apex classes?",
         "options": [
-            "SELECT Name FROM Account WHERE Name LIKE '%test%'",
-            "SELECT * FROM Account",
-            "SELECT Name FROM Account ORDER BY Name LIMIT 10",
-            "SELECT COUNT() FROM Account GROUP BY Type"
-        ],
-        "correct": [
-            0,
-            2
-        ],
-        "explanation": "Options A and C use valid SOQL syntax. SELECT * is not supported, and aggregate queries require proper field selection or aliases.",
-        "category": "Developer Fundamentals"
-    },
-    {
-        "question": "What is the purpose of the LIMIT clause in SOQL queries?",
-        "options": [
-            "To limit query execution time",
-            "To restrict the number of returned records",
-            "To optimize query performance automatically",
-            "To handle large dataset pagination"
+            "It restricts field visibility",
+            "It enforces user-level sharing rules",
+            "It overrides CRUD permissions",
+            "It hides private fields"
         ],
         "correct": 1,
-        "explanation": "The LIMIT clause restricts the maximum number of records returned by a SOQL query, helping manage governor limits and performance.",
-        "category": "Developer Fundamentals"
+        "explanation": "`with sharing` enforces sharing rules based on the current user context."
     },
     {
-        "question": "What is the key difference between Database.insert() and the insert statement?",
+        "question": "How does the 'with sharing' keyword impact data access in Apex classes?",
         "options": [
-            "Database.insert() is faster",
-            "Database.insert() allows partial success with allOrNone parameter",
-            "insert statement is deprecated",
-            "No functional difference exists"
+            "It restricts field visibility",
+            "It enforces user-level sharing rules",
+            "It overrides CRUD permissions",
+            "It hides private fields"
         ],
         "correct": 1,
-        "explanation": "Database.insert() offers the allOrNone parameter (default true) that allows partial success, while insert statement follows all-or-none behavior.",
-        "category": "Developer Fundamentals"
+        "explanation": "`with sharing` enforces sharing rules based on the current user context."
     },
     {
-        "question": "What happens when you exceed the SOQL query governor limit?",
+        "question": "Which interface must be implemented to allow Apex code to be called from a Lightning component?",
         "options": [
-            "The query returns partial results with a warning",
-            "A LimitException is thrown halting execution",
-            "The query is automatically optimized and retried",
-            "The transaction continues with empty results"
+            "Schedulable",
+            "Queueable",
+            "AuraEnabled",
+            "Database.Batchable"
+        ],
+        "correct": 2,
+        "explanation": "`@AuraEnabled` methods are required for Apex to be accessed from LWC or Aura components."
+    },
+    {
+        "question": "How does the 'with sharing' keyword impact data access in Apex classes?",
+        "options": [
+            "It restricts field visibility",
+            "It enforces user-level sharing rules",
+            "It overrides CRUD permissions",
+            "It hides private fields"
         ],
         "correct": 1,
-        "explanation": "Exceeding SOQL query limits throws a LimitException that stops transaction execution, requiring proper exception handling or query optimization.",
-        "category": "Developer Fundamentals"
+        "explanation": "`with sharing` enforces sharing rules based on the current user context."
     },
     {
-        "question": "Which approach is recommended for bulk DML operations in triggers?",
+        "question": "How does the 'with sharing' keyword impact data access in Apex classes?",
         "options": [
-            "Use individual insert statements in a loop",
-            "Use Database.insert() with a list of records",
-            "Use insert statement with a list of records",
-            "Both B and C are correct"
+            "It restricts field visibility",
+            "It enforces user-level sharing rules",
+            "It overrides CRUD permissions",
+            "It hides private fields"
         ],
-        "correct": 3,
-        "explanation": "Both Database.insert() and insert statement with lists are valid for bulk operations. Database methods provide more control with partial success options.",
-        "category": "Process Automation and Logic"
+        "correct": 1,
+        "explanation": "`with sharing` enforces sharing rules based on the current user context."
+    },
+    {
+        "question": "How does the 'with sharing' keyword impact data access in Apex classes?",
+        "options": [
+            "It restricts field visibility",
+            "It enforces user-level sharing rules",
+            "It overrides CRUD permissions",
+            "It hides private fields"
+        ],
+        "correct": 1,
+        "explanation": "`with sharing` enforces sharing rules based on the current user context."
+    },
+    {
+        "question": "Which interface must be implemented to allow Apex code to be called from a Lightning component?",
+        "options": [
+            "Schedulable",
+            "Queueable",
+            "AuraEnabled",
+            "Database.Batchable"
+        ],
+        "correct": 2,
+        "explanation": "`@AuraEnabled` methods are required for Apex to be accessed from LWC or Aura components."
+    },
+    {
+        "question": "Which interface must be implemented to allow Apex code to be called from a Lightning component?",
+        "options": [
+            "Schedulable",
+            "Queueable",
+            "AuraEnabled",
+            "Database.Batchable"
+        ],
+        "correct": 2,
+        "explanation": "`@AuraEnabled` methods are required for Apex to be accessed from LWC or Aura components."
+    },
+    {
+        "question": "Which interface must be implemented to allow Apex code to be called from a Lightning component?",
+        "options": [
+            "Schedulable",
+            "Queueable",
+            "AuraEnabled",
+            "Database.Batchable"
+        ],
+        "correct": 2,
+        "explanation": "`@AuraEnabled` methods are required for Apex to be accessed from LWC or Aura components."
+    },
+    {
+        "question": "How does the 'with sharing' keyword impact data access in Apex classes?",
+        "options": [
+            "It restricts field visibility",
+            "It enforces user-level sharing rules",
+            "It overrides CRUD permissions",
+            "It hides private fields"
+        ],
+        "correct": 1,
+        "explanation": "`with sharing` enforces sharing rules based on the current user context."
+    },
+    {
+        "question": "How does the 'with sharing' keyword impact data access in Apex classes?",
+        "options": [
+            "It restricts field visibility",
+            "It enforces user-level sharing rules",
+            "It overrides CRUD permissions",
+            "It hides private fields"
+        ],
+        "correct": 1,
+        "explanation": "`with sharing` enforces sharing rules based on the current user context."
+    },
+    {
+        "question": "Which interface must be implemented to allow Apex code to be called from a Lightning component?",
+        "options": [
+            "Schedulable",
+            "Queueable",
+            "AuraEnabled",
+            "Database.Batchable"
+        ],
+        "correct": 2,
+        "explanation": "`@AuraEnabled` methods are required for Apex to be accessed from LWC or Aura components."
+    },
+    {
+        "question": "Which interface must be implemented to allow Apex code to be called from a Lightning component?",
+        "options": [
+            "Schedulable",
+            "Queueable",
+            "AuraEnabled",
+            "Database.Batchable"
+        ],
+        "correct": 2,
+        "explanation": "`@AuraEnabled` methods are required for Apex to be accessed from LWC or Aura components."
+    },
+    {
+        "question": "Which interface must be implemented to allow Apex code to be called from a Lightning component?",
+        "options": [
+            "Schedulable",
+            "Queueable",
+            "AuraEnabled",
+            "Database.Batchable"
+        ],
+        "correct": 2,
+        "explanation": "`@AuraEnabled` methods are required for Apex to be accessed from LWC or Aura components."
+    },
+    {
+        "question": "Why might a developer choose Queueable Apex over Future methods?",
+        "options": [
+            "To return a value",
+            "To perform callouts",
+            "To chain jobs and pass complex types",
+            "To reduce heap size"
+        ],
+        "correct": 2,
+        "explanation": "Queueable Apex allows chaining and passing non-primitive parameters."
+    },
+    {
+        "question": "Which automation tool should be used to process millions of records asynchronously?",
+        "options": [
+            "Scheduled Flow",
+            "Queueable Apex",
+            "Batch Apex",
+            "Workflow Rule"
+        ],
+        "correct": 2,
+        "explanation": "Batch Apex is the most appropriate for handling large data volumes asynchronously."
+    },
+    {
+        "question": "Which automation tool should be used to process millions of records asynchronously?",
+        "options": [
+            "Scheduled Flow",
+            "Queueable Apex",
+            "Batch Apex",
+            "Workflow Rule"
+        ],
+        "correct": 2,
+        "explanation": "Batch Apex is the most appropriate for handling large data volumes asynchronously."
+    },
+    {
+        "question": "Which automation tool should be used to process millions of records asynchronously?",
+        "options": [
+            "Scheduled Flow",
+            "Queueable Apex",
+            "Batch Apex",
+            "Workflow Rule"
+        ],
+        "correct": 2,
+        "explanation": "Batch Apex is the most appropriate for handling large data volumes asynchronously."
+    },
+    {
+        "question": "Which automation tool should be used to process millions of records asynchronously?",
+        "options": [
+            "Scheduled Flow",
+            "Queueable Apex",
+            "Batch Apex",
+            "Workflow Rule"
+        ],
+        "correct": 2,
+        "explanation": "Batch Apex is the most appropriate for handling large data volumes asynchronously."
+    },
+    {
+        "question": "Which automation tool should be used to process millions of records asynchronously?",
+        "options": [
+            "Scheduled Flow",
+            "Queueable Apex",
+            "Batch Apex",
+            "Workflow Rule"
+        ],
+        "correct": 2,
+        "explanation": "Batch Apex is the most appropriate for handling large data volumes asynchronously."
+    },
+    {
+        "question": "Which automation tool should be used to process millions of records asynchronously?",
+        "options": [
+            "Scheduled Flow",
+            "Queueable Apex",
+            "Batch Apex",
+            "Workflow Rule"
+        ],
+        "correct": 2,
+        "explanation": "Batch Apex is the most appropriate for handling large data volumes asynchronously."
+    },
+    {
+        "question": "Which automation tool should be used to process millions of records asynchronously?",
+        "options": [
+            "Scheduled Flow",
+            "Queueable Apex",
+            "Batch Apex",
+            "Workflow Rule"
+        ],
+        "correct": 2,
+        "explanation": "Batch Apex is the most appropriate for handling large data volumes asynchronously."
+    },
+    {
+        "question": "Which automation tool should be used to process millions of records asynchronously?",
+        "options": [
+            "Scheduled Flow",
+            "Queueable Apex",
+            "Batch Apex",
+            "Workflow Rule"
+        ],
+        "correct": 2,
+        "explanation": "Batch Apex is the most appropriate for handling large data volumes asynchronously."
+    },
+    {
+        "question": "Why might a developer choose Queueable Apex over Future methods?",
+        "options": [
+            "To return a value",
+            "To perform callouts",
+            "To chain jobs and pass complex types",
+            "To reduce heap size"
+        ],
+        "correct": 2,
+        "explanation": "Queueable Apex allows chaining and passing non-primitive parameters."
+    },
+    {
+        "question": "Why might a developer choose Queueable Apex over Future methods?",
+        "options": [
+            "To return a value",
+            "To perform callouts",
+            "To chain jobs and pass complex types",
+            "To reduce heap size"
+        ],
+        "correct": 2,
+        "explanation": "Queueable Apex allows chaining and passing non-primitive parameters."
+    },
+    {
+        "question": "Why might a developer choose Queueable Apex over Future methods?",
+        "options": [
+            "To return a value",
+            "To perform callouts",
+            "To chain jobs and pass complex types",
+            "To reduce heap size"
+        ],
+        "correct": 2,
+        "explanation": "Queueable Apex allows chaining and passing non-primitive parameters."
+    },
+    {
+        "question": "Why might a developer choose Queueable Apex over Future methods?",
+        "options": [
+            "To return a value",
+            "To perform callouts",
+            "To chain jobs and pass complex types",
+            "To reduce heap size"
+        ],
+        "correct": 2,
+        "explanation": "Queueable Apex allows chaining and passing non-primitive parameters."
+    },
+    {
+        "question": "Which automation tool should be used to process millions of records asynchronously?",
+        "options": [
+            "Scheduled Flow",
+            "Queueable Apex",
+            "Batch Apex",
+            "Workflow Rule"
+        ],
+        "correct": 2,
+        "explanation": "Batch Apex is the most appropriate for handling large data volumes asynchronously."
+    },
+    {
+        "question": "Why might a developer choose Queueable Apex over Future methods?",
+        "options": [
+            "To return a value",
+            "To perform callouts",
+            "To chain jobs and pass complex types",
+            "To reduce heap size"
+        ],
+        "correct": 2,
+        "explanation": "Queueable Apex allows chaining and passing non-primitive parameters."
+    },
+    {
+        "question": "Why might a developer choose Queueable Apex over Future methods?",
+        "options": [
+            "To return a value",
+            "To perform callouts",
+            "To chain jobs and pass complex types",
+            "To reduce heap size"
+        ],
+        "correct": 2,
+        "explanation": "Queueable Apex allows chaining and passing non-primitive parameters."
+    },
+    {
+        "question": "Why might a developer choose Queueable Apex over Future methods?",
+        "options": [
+            "To return a value",
+            "To perform callouts",
+            "To chain jobs and pass complex types",
+            "To reduce heap size"
+        ],
+        "correct": 2,
+        "explanation": "Queueable Apex allows chaining and passing non-primitive parameters."
+    },
+    {
+        "question": "How can a Lightning Web Component emit a custom event to its parent?",
+        "options": [
+            "`this.dispatch('eventname')`",
+            "`this.dispatchEvent(new CustomEvent('eventname'))`",
+            "`CustomEvent.fire()`",
+            "`this.fireEvent('eventname')`"
+        ],
+        "correct": 1,
+        "explanation": "`this.dispatchEvent(new CustomEvent('eventname'))` is the correct syntax."
+    },
+    {
+        "question": "What is the correct way to pass data from a child LWC to a parent component?",
+        "options": [
+            "Use @api decorators",
+            "Use lightning-message-service",
+            "Use event bubbling with CustomEvent",
+            "Use getter/setter bindings"
+        ],
+        "correct": 2,
+        "explanation": "Child components use CustomEvent to pass data upward via event bubbling."
+    },
+    {
+        "question": "What is the correct way to pass data from a child LWC to a parent component?",
+        "options": [
+            "Use @api decorators",
+            "Use lightning-message-service",
+            "Use event bubbling with CustomEvent",
+            "Use getter/setter bindings"
+        ],
+        "correct": 2,
+        "explanation": "Child components use CustomEvent to pass data upward via event bubbling."
+    },
+    {
+        "question": "How can a Lightning Web Component emit a custom event to its parent?",
+        "options": [
+            "`this.dispatch('eventname')`",
+            "`this.dispatchEvent(new CustomEvent('eventname'))`",
+            "`CustomEvent.fire()`",
+            "`this.fireEvent('eventname')`"
+        ],
+        "correct": 1,
+        "explanation": "`this.dispatchEvent(new CustomEvent('eventname'))` is the correct syntax."
+    },
+    {
+        "question": "How can a Lightning Web Component emit a custom event to its parent?",
+        "options": [
+            "`this.dispatch('eventname')`",
+            "`this.dispatchEvent(new CustomEvent('eventname'))`",
+            "`CustomEvent.fire()`",
+            "`this.fireEvent('eventname')`"
+        ],
+        "correct": 1,
+        "explanation": "`this.dispatchEvent(new CustomEvent('eventname'))` is the correct syntax."
+    },
+    {
+        "question": "How can a Lightning Web Component emit a custom event to its parent?",
+        "options": [
+            "`this.dispatch('eventname')`",
+            "`this.dispatchEvent(new CustomEvent('eventname'))`",
+            "`CustomEvent.fire()`",
+            "`this.fireEvent('eventname')`"
+        ],
+        "correct": 1,
+        "explanation": "`this.dispatchEvent(new CustomEvent('eventname'))` is the correct syntax."
+    },
+    {
+        "question": "What is the correct way to pass data from a child LWC to a parent component?",
+        "options": [
+            "Use @api decorators",
+            "Use lightning-message-service",
+            "Use event bubbling with CustomEvent",
+            "Use getter/setter bindings"
+        ],
+        "correct": 2,
+        "explanation": "Child components use CustomEvent to pass data upward via event bubbling."
+    },
+    {
+        "question": "How can a Lightning Web Component emit a custom event to its parent?",
+        "options": [
+            "`this.dispatch('eventname')`",
+            "`this.dispatchEvent(new CustomEvent('eventname'))`",
+            "`CustomEvent.fire()`",
+            "`this.fireEvent('eventname')`"
+        ],
+        "correct": 1,
+        "explanation": "`this.dispatchEvent(new CustomEvent('eventname'))` is the correct syntax."
+    },
+    {
+        "question": "What is the correct way to pass data from a child LWC to a parent component?",
+        "options": [
+            "Use @api decorators",
+            "Use lightning-message-service",
+            "Use event bubbling with CustomEvent",
+            "Use getter/setter bindings"
+        ],
+        "correct": 2,
+        "explanation": "Child components use CustomEvent to pass data upward via event bubbling."
+    },
+    {
+        "question": "What is the correct way to pass data from a child LWC to a parent component?",
+        "options": [
+            "Use @api decorators",
+            "Use lightning-message-service",
+            "Use event bubbling with CustomEvent",
+            "Use getter/setter bindings"
+        ],
+        "correct": 2,
+        "explanation": "Child components use CustomEvent to pass data upward via event bubbling."
+    },
+    {
+        "question": "What is the correct way to pass data from a child LWC to a parent component?",
+        "options": [
+            "Use @api decorators",
+            "Use lightning-message-service",
+            "Use event bubbling with CustomEvent",
+            "Use getter/setter bindings"
+        ],
+        "correct": 2,
+        "explanation": "Child components use CustomEvent to pass data upward via event bubbling."
+    },
+    {
+        "question": "How can a Lightning Web Component emit a custom event to its parent?",
+        "options": [
+            "`this.dispatch('eventname')`",
+            "`this.dispatchEvent(new CustomEvent('eventname'))`",
+            "`CustomEvent.fire()`",
+            "`this.fireEvent('eventname')`"
+        ],
+        "correct": 1,
+        "explanation": "`this.dispatchEvent(new CustomEvent('eventname'))` is the correct syntax."
+    },
+    {
+        "question": "How can a Lightning Web Component emit a custom event to its parent?",
+        "options": [
+            "`this.dispatch('eventname')`",
+            "`this.dispatchEvent(new CustomEvent('eventname'))`",
+            "`CustomEvent.fire()`",
+            "`this.fireEvent('eventname')`"
+        ],
+        "correct": 1,
+        "explanation": "`this.dispatchEvent(new CustomEvent('eventname'))` is the correct syntax."
+    },
+    {
+        "question": "What is the correct way to pass data from a child LWC to a parent component?",
+        "options": [
+            "Use @api decorators",
+            "Use lightning-message-service",
+            "Use event bubbling with CustomEvent",
+            "Use getter/setter bindings"
+        ],
+        "correct": 2,
+        "explanation": "Child components use CustomEvent to pass data upward via event bubbling."
+    },
+    {
+        "question": "Which deployment method supports full automation and source control integration?",
+        "options": [
+            "Change Sets",
+            "Ant Migration Tool",
+            "Salesforce CLI (SFDX)",
+            "Manual metadata upload"
+        ],
+        "correct": 2,
+        "explanation": "Salesforce CLI (SFDX) enables CI/CD pipelines and integration with source control."
+    },
+    {
+        "question": "What is the role of a Test Data Factory in test classes?",
+        "options": [
+            "It inserts live org data",
+            "It manages asynchronous code",
+            "It centralizes and reuses test data creation",
+            "It runs deployment validation"
+        ],
+        "correct": 2,
+        "explanation": "Test Data Factories ensure reusable and maintainable test data logic across test classes."
+    },
+    {
+        "question": "What is the role of a Test Data Factory in test classes?",
+        "options": [
+            "It inserts live org data",
+            "It manages asynchronous code",
+            "It centralizes and reuses test data creation",
+            "It runs deployment validation"
+        ],
+        "correct": 2,
+        "explanation": "Test Data Factories ensure reusable and maintainable test data logic across test classes."
+    },
+    {
+        "question": "What is the role of a Test Data Factory in test classes?",
+        "options": [
+            "It inserts live org data",
+            "It manages asynchronous code",
+            "It centralizes and reuses test data creation",
+            "It runs deployment validation"
+        ],
+        "correct": 2,
+        "explanation": "Test Data Factories ensure reusable and maintainable test data logic across test classes."
+    },
+    {
+        "question": "What is the role of a Test Data Factory in test classes?",
+        "options": [
+            "It inserts live org data",
+            "It manages asynchronous code",
+            "It centralizes and reuses test data creation",
+            "It runs deployment validation"
+        ],
+        "correct": 2,
+        "explanation": "Test Data Factories ensure reusable and maintainable test data logic across test classes."
+    },
+    {
+        "question": "Which deployment method supports full automation and source control integration?",
+        "options": [
+            "Change Sets",
+            "Ant Migration Tool",
+            "Salesforce CLI (SFDX)",
+            "Manual metadata upload"
+        ],
+        "correct": 2,
+        "explanation": "Salesforce CLI (SFDX) enables CI/CD pipelines and integration with source control."
+    },
+    {
+        "question": "Which deployment method supports full automation and source control integration?",
+        "options": [
+            "Change Sets",
+            "Ant Migration Tool",
+            "Salesforce CLI (SFDX)",
+            "Manual metadata upload"
+        ],
+        "correct": 2,
+        "explanation": "Salesforce CLI (SFDX) enables CI/CD pipelines and integration with source control."
+    },
+    {
+        "question": "Which deployment method supports full automation and source control integration?",
+        "options": [
+            "Change Sets",
+            "Ant Migration Tool",
+            "Salesforce CLI (SFDX)",
+            "Manual metadata upload"
+        ],
+        "correct": 2,
+        "explanation": "Salesforce CLI (SFDX) enables CI/CD pipelines and integration with source control."
+    },
+    {
+        "question": "Which deployment method supports full automation and source control integration?",
+        "options": [
+            "Change Sets",
+            "Ant Migration Tool",
+            "Salesforce CLI (SFDX)",
+            "Manual metadata upload"
+        ],
+        "correct": 2,
+        "explanation": "Salesforce CLI (SFDX) enables CI/CD pipelines and integration with source control."
     }
 ];

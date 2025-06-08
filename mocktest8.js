@@ -1,89 +1,651 @@
 var questions = [
     {
-        "question": "What happens when you exceed the SOQL query governor limit?",
+        "question": "What is the result of performing a DML operation on a list with partial failures in Apex?",
         "options": [
-            "The query returns partial results with a warning",
-            "A LimitException is thrown halting execution",
-            "The query is automatically optimized and retried",
-            "The transaction continues with empty results"
+            "All records succeed",
+            "All records fail",
+            "Successful records are committed, others are rolled back",
+            "An exception is thrown and none are committed"
+        ],
+        "correct": 2,
+        "explanation": "Using Database methods like `Database.insert(records, false)` allows partial success with result tracking."
+    },
+    {
+        "question": "Which scenario requires the use of `@future(callout=true)`?",
+        "options": [
+            "Scheduling Apex in future",
+            "Performing DML after callout",
+            "Making HTTP callouts asynchronously",
+            "Invoking flows from Apex"
+        ],
+        "correct": 2,
+        "explanation": "`@future(callout=true)` enables asynchronous callouts from Apex."
+    },
+    {
+        "question": "Which scenario requires the use of `@future(callout=true)`?",
+        "options": [
+            "Scheduling Apex in future",
+            "Performing DML after callout",
+            "Making HTTP callouts asynchronously",
+            "Invoking flows from Apex"
+        ],
+        "correct": 2,
+        "explanation": "`@future(callout=true)` enables asynchronous callouts from Apex."
+    },
+    {
+        "question": "Which scenario requires the use of `@future(callout=true)`?",
+        "options": [
+            "Scheduling Apex in future",
+            "Performing DML after callout",
+            "Making HTTP callouts asynchronously",
+            "Invoking flows from Apex"
+        ],
+        "correct": 2,
+        "explanation": "`@future(callout=true)` enables asynchronous callouts from Apex."
+    },
+    {
+        "question": "What is the result of performing a DML operation on a list with partial failures in Apex?",
+        "options": [
+            "All records succeed",
+            "All records fail",
+            "Successful records are committed, others are rolled back",
+            "An exception is thrown and none are committed"
+        ],
+        "correct": 2,
+        "explanation": "Using Database methods like `Database.insert(records, false)` allows partial success with result tracking."
+    },
+    {
+        "question": "Which scenario requires the use of `@future(callout=true)`?",
+        "options": [
+            "Scheduling Apex in future",
+            "Performing DML after callout",
+            "Making HTTP callouts asynchronously",
+            "Invoking flows from Apex"
+        ],
+        "correct": 2,
+        "explanation": "`@future(callout=true)` enables asynchronous callouts from Apex."
+    },
+    {
+        "question": "What is the result of performing a DML operation on a list with partial failures in Apex?",
+        "options": [
+            "All records succeed",
+            "All records fail",
+            "Successful records are committed, others are rolled back",
+            "An exception is thrown and none are committed"
+        ],
+        "correct": 2,
+        "explanation": "Using Database methods like `Database.insert(records, false)` allows partial success with result tracking."
+    },
+    {
+        "question": "What is the result of performing a DML operation on a list with partial failures in Apex?",
+        "options": [
+            "All records succeed",
+            "All records fail",
+            "Successful records are committed, others are rolled back",
+            "An exception is thrown and none are committed"
+        ],
+        "correct": 2,
+        "explanation": "Using Database methods like `Database.insert(records, false)` allows partial success with result tracking."
+    },
+    {
+        "question": "What is the result of performing a DML operation on a list with partial failures in Apex?",
+        "options": [
+            "All records succeed",
+            "All records fail",
+            "Successful records are committed, others are rolled back",
+            "An exception is thrown and none are committed"
+        ],
+        "correct": 2,
+        "explanation": "Using Database methods like `Database.insert(records, false)` allows partial success with result tracking."
+    },
+    {
+        "question": "Which scenario requires the use of `@future(callout=true)`?",
+        "options": [
+            "Scheduling Apex in future",
+            "Performing DML after callout",
+            "Making HTTP callouts asynchronously",
+            "Invoking flows from Apex"
+        ],
+        "correct": 2,
+        "explanation": "`@future(callout=true)` enables asynchronous callouts from Apex."
+    },
+    {
+        "question": "Which scenario requires the use of `@future(callout=true)`?",
+        "options": [
+            "Scheduling Apex in future",
+            "Performing DML after callout",
+            "Making HTTP callouts asynchronously",
+            "Invoking flows from Apex"
+        ],
+        "correct": 2,
+        "explanation": "`@future(callout=true)` enables asynchronous callouts from Apex."
+    },
+    {
+        "question": "What is the result of performing a DML operation on a list with partial failures in Apex?",
+        "options": [
+            "All records succeed",
+            "All records fail",
+            "Successful records are committed, others are rolled back",
+            "An exception is thrown and none are committed"
+        ],
+        "correct": 2,
+        "explanation": "Using Database methods like `Database.insert(records, false)` allows partial success with result tracking."
+    },
+    {
+        "question": "What is the result of performing a DML operation on a list with partial failures in Apex?",
+        "options": [
+            "All records succeed",
+            "All records fail",
+            "Successful records are committed, others are rolled back",
+            "An exception is thrown and none are committed"
+        ],
+        "correct": 2,
+        "explanation": "Using Database methods like `Database.insert(records, false)` allows partial success with result tracking."
+    },
+    {
+        "question": "What is the result of performing a DML operation on a list with partial failures in Apex?",
+        "options": [
+            "All records succeed",
+            "All records fail",
+            "Successful records are committed, others are rolled back",
+            "An exception is thrown and none are committed"
+        ],
+        "correct": 2,
+        "explanation": "Using Database methods like `Database.insert(records, false)` allows partial success with result tracking."
+    },
+    {
+        "question": "Which scenario requires the use of `@future(callout=true)`?",
+        "options": [
+            "Scheduling Apex in future",
+            "Performing DML after callout",
+            "Making HTTP callouts asynchronously",
+            "Invoking flows from Apex"
+        ],
+        "correct": 2,
+        "explanation": "`@future(callout=true)` enables asynchronous callouts from Apex."
+    },
+    {
+        "question": "Which scenario requires the use of `@future(callout=true)`?",
+        "options": [
+            "Scheduling Apex in future",
+            "Performing DML after callout",
+            "Making HTTP callouts asynchronously",
+            "Invoking flows from Apex"
+        ],
+        "correct": 2,
+        "explanation": "`@future(callout=true)` enables asynchronous callouts from Apex."
+    },
+    {
+        "question": "What is the result of performing a DML operation on a list with partial failures in Apex?",
+        "options": [
+            "All records succeed",
+            "All records fail",
+            "Successful records are committed, others are rolled back",
+            "An exception is thrown and none are committed"
+        ],
+        "correct": 2,
+        "explanation": "Using Database methods like `Database.insert(records, false)` allows partial success with result tracking."
+    },
+    {
+        "question": "Which scenario requires the use of `@future(callout=true)`?",
+        "options": [
+            "Scheduling Apex in future",
+            "Performing DML after callout",
+            "Making HTTP callouts asynchronously",
+            "Invoking flows from Apex"
+        ],
+        "correct": 2,
+        "explanation": "`@future(callout=true)` enables asynchronous callouts from Apex."
+    },
+    {
+        "question": "What is the result of performing a DML operation on a list with partial failures in Apex?",
+        "options": [
+            "All records succeed",
+            "All records fail",
+            "Successful records are committed, others are rolled back",
+            "An exception is thrown and none are committed"
+        ],
+        "correct": 2,
+        "explanation": "Using Database methods like `Database.insert(records, false)` allows partial success with result tracking."
+    },
+    {
+        "question": "In what scenario would you use a `Queueable` over a `Future` method?",
+        "options": [
+            "Need to make a callout",
+            "Need to return a value",
+            "Need to chain jobs and monitor state",
+            "Need to send emails"
+        ],
+        "correct": 2,
+        "explanation": "`Queueable` Apex supports job chaining and better control over asynchronous processing."
+    },
+    {
+        "question": "What will happen if a Process Builder and a Before Trigger both update the same field?",
+        "options": [
+            "Process Builder takes precedence",
+            "Trigger overrides the Process Builder",
+            "Last one executed wins",
+            "Salesforce throws a conflict error"
+        ],
+        "correct": 2,
+        "explanation": "The last automation executed will override previous changes if updating the same field."
+    },
+    {
+        "question": "In what scenario would you use a `Queueable` over a `Future` method?",
+        "options": [
+            "Need to make a callout",
+            "Need to return a value",
+            "Need to chain jobs and monitor state",
+            "Need to send emails"
+        ],
+        "correct": 2,
+        "explanation": "`Queueable` Apex supports job chaining and better control over asynchronous processing."
+    },
+    {
+        "question": "What will happen if a Process Builder and a Before Trigger both update the same field?",
+        "options": [
+            "Process Builder takes precedence",
+            "Trigger overrides the Process Builder",
+            "Last one executed wins",
+            "Salesforce throws a conflict error"
+        ],
+        "correct": 2,
+        "explanation": "The last automation executed will override previous changes if updating the same field."
+    },
+    {
+        "question": "What will happen if a Process Builder and a Before Trigger both update the same field?",
+        "options": [
+            "Process Builder takes precedence",
+            "Trigger overrides the Process Builder",
+            "Last one executed wins",
+            "Salesforce throws a conflict error"
+        ],
+        "correct": 2,
+        "explanation": "The last automation executed will override previous changes if updating the same field."
+    },
+    {
+        "question": "What will happen if a Process Builder and a Before Trigger both update the same field?",
+        "options": [
+            "Process Builder takes precedence",
+            "Trigger overrides the Process Builder",
+            "Last one executed wins",
+            "Salesforce throws a conflict error"
+        ],
+        "correct": 2,
+        "explanation": "The last automation executed will override previous changes if updating the same field."
+    },
+    {
+        "question": "In what scenario would you use a `Queueable` over a `Future` method?",
+        "options": [
+            "Need to make a callout",
+            "Need to return a value",
+            "Need to chain jobs and monitor state",
+            "Need to send emails"
+        ],
+        "correct": 2,
+        "explanation": "`Queueable` Apex supports job chaining and better control over asynchronous processing."
+    },
+    {
+        "question": "In what scenario would you use a `Queueable` over a `Future` method?",
+        "options": [
+            "Need to make a callout",
+            "Need to return a value",
+            "Need to chain jobs and monitor state",
+            "Need to send emails"
+        ],
+        "correct": 2,
+        "explanation": "`Queueable` Apex supports job chaining and better control over asynchronous processing."
+    },
+    {
+        "question": "In what scenario would you use a `Queueable` over a `Future` method?",
+        "options": [
+            "Need to make a callout",
+            "Need to return a value",
+            "Need to chain jobs and monitor state",
+            "Need to send emails"
+        ],
+        "correct": 2,
+        "explanation": "`Queueable` Apex supports job chaining and better control over asynchronous processing."
+    },
+    {
+        "question": "In what scenario would you use a `Queueable` over a `Future` method?",
+        "options": [
+            "Need to make a callout",
+            "Need to return a value",
+            "Need to chain jobs and monitor state",
+            "Need to send emails"
+        ],
+        "correct": 2,
+        "explanation": "`Queueable` Apex supports job chaining and better control over asynchronous processing."
+    },
+    {
+        "question": "What will happen if a Process Builder and a Before Trigger both update the same field?",
+        "options": [
+            "Process Builder takes precedence",
+            "Trigger overrides the Process Builder",
+            "Last one executed wins",
+            "Salesforce throws a conflict error"
+        ],
+        "correct": 2,
+        "explanation": "The last automation executed will override previous changes if updating the same field."
+    },
+    {
+        "question": "What will happen if a Process Builder and a Before Trigger both update the same field?",
+        "options": [
+            "Process Builder takes precedence",
+            "Trigger overrides the Process Builder",
+            "Last one executed wins",
+            "Salesforce throws a conflict error"
+        ],
+        "correct": 2,
+        "explanation": "The last automation executed will override previous changes if updating the same field."
+    },
+    {
+        "question": "What will happen if a Process Builder and a Before Trigger both update the same field?",
+        "options": [
+            "Process Builder takes precedence",
+            "Trigger overrides the Process Builder",
+            "Last one executed wins",
+            "Salesforce throws a conflict error"
+        ],
+        "correct": 2,
+        "explanation": "The last automation executed will override previous changes if updating the same field."
+    },
+    {
+        "question": "In what scenario would you use a `Queueable` over a `Future` method?",
+        "options": [
+            "Need to make a callout",
+            "Need to return a value",
+            "Need to chain jobs and monitor state",
+            "Need to send emails"
+        ],
+        "correct": 2,
+        "explanation": "`Queueable` Apex supports job chaining and better control over asynchronous processing."
+    },
+    {
+        "question": "What will happen if a Process Builder and a Before Trigger both update the same field?",
+        "options": [
+            "Process Builder takes precedence",
+            "Trigger overrides the Process Builder",
+            "Last one executed wins",
+            "Salesforce throws a conflict error"
+        ],
+        "correct": 2,
+        "explanation": "The last automation executed will override previous changes if updating the same field."
+    },
+    {
+        "question": "In what scenario would you use a `Queueable` over a `Future` method?",
+        "options": [
+            "Need to make a callout",
+            "Need to return a value",
+            "Need to chain jobs and monitor state",
+            "Need to send emails"
+        ],
+        "correct": 2,
+        "explanation": "`Queueable` Apex supports job chaining and better control over asynchronous processing."
+    },
+    {
+        "question": "What will happen if a Process Builder and a Before Trigger both update the same field?",
+        "options": [
+            "Process Builder takes precedence",
+            "Trigger overrides the Process Builder",
+            "Last one executed wins",
+            "Salesforce throws a conflict error"
+        ],
+        "correct": 2,
+        "explanation": "The last automation executed will override previous changes if updating the same field."
+    },
+    {
+        "question": "What happens if a tracked property is updated in LWC?",
+        "options": [
+            "No change unless refreshed manually",
+            "It rerenders the DOM automatically",
+            "It updates after 5 seconds",
+            "It breaks component state"
         ],
         "correct": 1,
-        "explanation": "Exceeding SOQL query limits throws a LimitException that stops transaction execution, requiring proper exception handling or query optimization.",
-        "category": "Developer Fundamentals"
+        "explanation": "Tracked properties in LWC cause the component to re-render when their value changes."
     },
     {
-        "question": "What is the purpose of the LIMIT clause in SOQL queries?",
+        "question": "How would you conditionally render a block in LWC only when a list has data?",
         "options": [
-            "To limit query execution time",
-            "To restrict the number of returned records",
-            "To optimize query performance automatically",
-            "To handle large dataset pagination"
+            "Use an if:true directive on <template>",
+            "Use a ternary operator",
+            "Use a JavaScript if statement in markup",
+            "Use lwc:if"
+        ],
+        "correct": 0,
+        "explanation": "`<template if:true={property}>` is the correct syntax for conditional rendering in LWC."
+    },
+    {
+        "question": "What happens if a tracked property is updated in LWC?",
+        "options": [
+            "No change unless refreshed manually",
+            "It rerenders the DOM automatically",
+            "It updates after 5 seconds",
+            "It breaks component state"
         ],
         "correct": 1,
-        "explanation": "The LIMIT clause restricts the maximum number of records returned by a SOQL query, helping manage governor limits and performance.",
-        "category": "Developer Fundamentals"
+        "explanation": "Tracked properties in LWC cause the component to re-render when their value changes."
     },
     {
-        "question": "Which statement about SOQL queries is correct?",
+        "question": "What happens if a tracked property is updated in LWC?",
         "options": [
-            "SOQL keywords are case-sensitive",
-            "SOQL can query any Salesforce object with proper permissions",
-            "SELECT * is supported to query all fields",
-            "SOQL queries have no record limits"
+            "No change unless refreshed manually",
+            "It rerenders the DOM automatically",
+            "It updates after 5 seconds",
+            "It breaks component state"
         ],
         "correct": 1,
-        "explanation": "SOQL can query any accessible Salesforce object. Keywords are case-insensitive, SELECT * is not supported, and there are record limits.",
-        "category": "Developer Fundamentals"
+        "explanation": "Tracked properties in LWC cause the component to re-render when their value changes."
     },
     {
-        "question": "Which SOQL queries are valid? (Select 2)",
+        "question": "What happens if a tracked property is updated in LWC?",
         "options": [
-            "SELECT Name FROM Account WHERE Name LIKE '%test%'",
-            "SELECT * FROM Account",
-            "SELECT Name FROM Account ORDER BY Name LIMIT 10",
-            "SELECT COUNT() FROM Account GROUP BY Type"
-        ],
-        "correct": [
-            0,
-            2
-        ],
-        "explanation": "Options A and C use valid SOQL syntax. SELECT * is not supported, and aggregate queries require proper field selection or aliases.",
-        "category": "Developer Fundamentals"
-    },
-    {
-        "question": "What is the key difference between Database.insert() and the insert statement?",
-        "options": [
-            "Database.insert() is faster",
-            "Database.insert() allows partial success with allOrNone parameter",
-            "insert statement is deprecated",
-            "No functional difference exists"
+            "No change unless refreshed manually",
+            "It rerenders the DOM automatically",
+            "It updates after 5 seconds",
+            "It breaks component state"
         ],
         "correct": 1,
-        "explanation": "Database.insert() offers the allOrNone parameter (default true) that allows partial success, while insert statement follows all-or-none behavior.",
-        "category": "Developer Fundamentals"
+        "explanation": "Tracked properties in LWC cause the component to re-render when their value changes."
     },
     {
-        "question": "What is the maximum number of records that can be processed in a single DML statement?",
+        "question": "How would you conditionally render a block in LWC only when a list has data?",
         "options": [
-            "100",
-            "200",
-            "500",
-            "10,000"
+            "Use an if:true directive on <template>",
+            "Use a ternary operator",
+            "Use a JavaScript if statement in markup",
+            "Use lwc:if"
+        ],
+        "correct": 0,
+        "explanation": "`<template if:true={property}>` is the correct syntax for conditional rendering in LWC."
+    },
+    {
+        "question": "What happens if a tracked property is updated in LWC?",
+        "options": [
+            "No change unless refreshed manually",
+            "It rerenders the DOM automatically",
+            "It updates after 5 seconds",
+            "It breaks component state"
         ],
         "correct": 1,
-        "explanation": "A single DML statement can process up to 200 records. This applies to insert, update, delete, and upsert operations.",
-        "category": "Developer Fundamentals"
+        "explanation": "Tracked properties in LWC cause the component to re-render when their value changes."
     },
     {
-        "question": "Which approach is recommended for bulk DML operations in triggers?",
+        "question": "How would you conditionally render a block in LWC only when a list has data?",
         "options": [
-            "Use individual insert statements in a loop",
-            "Use Database.insert() with a list of records",
-            "Use insert statement with a list of records",
-            "Both B and C are correct"
+            "Use an if:true directive on <template>",
+            "Use a ternary operator",
+            "Use a JavaScript if statement in markup",
+            "Use lwc:if"
         ],
-        "correct": 3,
-        "explanation": "Both Database.insert() and insert statement with lists are valid for bulk operations. Database methods provide more control with partial success options.",
-        "category": "Process Automation and Logic"
+        "correct": 0,
+        "explanation": "`<template if:true={property}>` is the correct syntax for conditional rendering in LWC."
+    },
+    {
+        "question": "What happens if a tracked property is updated in LWC?",
+        "options": [
+            "No change unless refreshed manually",
+            "It rerenders the DOM automatically",
+            "It updates after 5 seconds",
+            "It breaks component state"
+        ],
+        "correct": 1,
+        "explanation": "Tracked properties in LWC cause the component to re-render when their value changes."
+    },
+    {
+        "question": "How would you conditionally render a block in LWC only when a list has data?",
+        "options": [
+            "Use an if:true directive on <template>",
+            "Use a ternary operator",
+            "Use a JavaScript if statement in markup",
+            "Use lwc:if"
+        ],
+        "correct": 0,
+        "explanation": "`<template if:true={property}>` is the correct syntax for conditional rendering in LWC."
+    },
+    {
+        "question": "What happens if a tracked property is updated in LWC?",
+        "options": [
+            "No change unless refreshed manually",
+            "It rerenders the DOM automatically",
+            "It updates after 5 seconds",
+            "It breaks component state"
+        ],
+        "correct": 1,
+        "explanation": "Tracked properties in LWC cause the component to re-render when their value changes."
+    },
+    {
+        "question": "How would you conditionally render a block in LWC only when a list has data?",
+        "options": [
+            "Use an if:true directive on <template>",
+            "Use a ternary operator",
+            "Use a JavaScript if statement in markup",
+            "Use lwc:if"
+        ],
+        "correct": 0,
+        "explanation": "`<template if:true={property}>` is the correct syntax for conditional rendering in LWC."
+    },
+    {
+        "question": "How would you conditionally render a block in LWC only when a list has data?",
+        "options": [
+            "Use an if:true directive on <template>",
+            "Use a ternary operator",
+            "Use a JavaScript if statement in markup",
+            "Use lwc:if"
+        ],
+        "correct": 0,
+        "explanation": "`<template if:true={property}>` is the correct syntax for conditional rendering in LWC."
+    },
+    {
+        "question": "How would you conditionally render a block in LWC only when a list has data?",
+        "options": [
+            "Use an if:true directive on <template>",
+            "Use a ternary operator",
+            "Use a JavaScript if statement in markup",
+            "Use lwc:if"
+        ],
+        "correct": 0,
+        "explanation": "`<template if:true={property}>` is the correct syntax for conditional rendering in LWC."
+    },
+    {
+        "question": "What is a Test.startTest() / Test.stopTest() block used for?",
+        "options": [
+            "Inserting test data",
+            "Resetting governor limits",
+            "Running asynchronous jobs only",
+            "Setting batch size"
+        ],
+        "correct": 1,
+        "explanation": "`Test.startTest()` resets governor limits to ensure fair testing and allows testing async code."
+    },
+    {
+        "question": "Which statement is true about test data in Apex test classes?",
+        "options": [
+            "All standard data is available",
+            "Data is rolled back at end of test",
+            "You must insert actual Account data",
+            "Data persists unless deleted"
+        ],
+        "correct": 1,
+        "explanation": "Test data is rolled back automatically after test execution."
+    },
+    {
+        "question": "What is a Test.startTest() / Test.stopTest() block used for?",
+        "options": [
+            "Inserting test data",
+            "Resetting governor limits",
+            "Running asynchronous jobs only",
+            "Setting batch size"
+        ],
+        "correct": 1,
+        "explanation": "`Test.startTest()` resets governor limits to ensure fair testing and allows testing async code."
+    },
+    {
+        "question": "Which statement is true about test data in Apex test classes?",
+        "options": [
+            "All standard data is available",
+            "Data is rolled back at end of test",
+            "You must insert actual Account data",
+            "Data persists unless deleted"
+        ],
+        "correct": 1,
+        "explanation": "Test data is rolled back automatically after test execution."
+    },
+    {
+        "question": "Which statement is true about test data in Apex test classes?",
+        "options": [
+            "All standard data is available",
+            "Data is rolled back at end of test",
+            "You must insert actual Account data",
+            "Data persists unless deleted"
+        ],
+        "correct": 1,
+        "explanation": "Test data is rolled back automatically after test execution."
+    },
+    {
+        "question": "What is a Test.startTest() / Test.stopTest() block used for?",
+        "options": [
+            "Inserting test data",
+            "Resetting governor limits",
+            "Running asynchronous jobs only",
+            "Setting batch size"
+        ],
+        "correct": 1,
+        "explanation": "`Test.startTest()` resets governor limits to ensure fair testing and allows testing async code."
+    },
+    {
+        "question": "What is a Test.startTest() / Test.stopTest() block used for?",
+        "options": [
+            "Inserting test data",
+            "Resetting governor limits",
+            "Running asynchronous jobs only",
+            "Setting batch size"
+        ],
+        "correct": 1,
+        "explanation": "`Test.startTest()` resets governor limits to ensure fair testing and allows testing async code."
+    },
+    {
+        "question": "Which statement is true about test data in Apex test classes?",
+        "options": [
+            "All standard data is available",
+            "Data is rolled back at end of test",
+            "You must insert actual Account data",
+            "Data persists unless deleted"
+        ],
+        "correct": 1,
+        "explanation": "Test data is rolled back automatically after test execution."
+    },
+    {
+        "question": "What is a Test.startTest() / Test.stopTest() block used for?",
+        "options": [
+            "Inserting test data",
+            "Resetting governor limits",
+            "Running asynchronous jobs only",
+            "Setting batch size"
+        ],
+        "correct": 1,
+        "explanation": "`Test.startTest()` resets governor limits to ensure fair testing and allows testing async code."
     }
 ];
