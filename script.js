@@ -5,25 +5,15 @@ let timerInterval;
 
 // Category definitions with question ranges
 const categories = {
-    'Developer Fundamentals': { 
-        range: [0, 18], // 19 questions (0-18)
-        total: 19,
+    'Fundamentals': { 
+        range: [0, 29], // 30 questions (0-29)
+        total: 30,
         color: '#FF6B6B'
     },
-    'Process Automation and Logic': { 
-        range: [19, 35], // 17 questions (19-35)
-        total: 17,
+    'OOP': { 
+        range: [30, 60], // 30 questions (30-60)
+        total: 30,
         color: '#4ECDC4'
-    },
-    'User Interface': { 
-        range: [36, 49], // 14 questions (36-49)
-        total: 14,
-        color: '#45B7D1'
-    },
-    'Testing, Debugging, and Deployment': { 
-        range: [50, 60], // 10 questions (50-60)
-        total: 10,
-        color: '#96CEB4'
     }
 };
 
