@@ -1,4 +1,4 @@
-![Exam Page](https://github.com/ImZaharias/Beginner-Programming-Mock-Exam/blob/main/fundamentals-cover.png)
+![Exam Page]()
 
 # Beginner Programming Mock Exam
 
