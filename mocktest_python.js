@@ -39,7 +39,7 @@ var questions = [
                 "// This is a comment",
                 "/* This is a comment */",
                 "# This is a comment",
-                "<!-- This is a comment -->"
+                "&lt;!-- This is a comment --&gt;"
             ],
             "correct": 2,
             "explanation": "Python uses the # symbol for single-line comments."
