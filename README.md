@@ -29,7 +29,7 @@ A full simulation environment to practice essential programming topics across po
 
 ## 🌐 Live Demo
 
-👉 **[Try the App](https://imzaharias.github.io/Beginner-Programming-Mock-Exam/)**
+👉 **[Try the App](https://imzaharias.github.io/Mock-Exam-Fundamentals-Oop/)**
 
 ---
 
@@ -116,7 +116,7 @@ You can easily extend or customize:
 **Ready to test your programming skills?** 🧠  
 Try it now and track your score!
 
-👉 **[Start Practicing](https://imzaharias.github.io/Beginner-Programming-Mock-Exam/)**
+👉 **[Start Practicing](https://imzaharias.github.io/Mock-Exam-Fundamentals-Oop/)**
 
 ---
 
